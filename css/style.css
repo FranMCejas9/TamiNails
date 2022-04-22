@@ -7,7 +7,10 @@
     font-family: 'PT Serif', serif;
 }
 /* /////////////////////////////////////////////////////////CONTENEDORES///////////////////////////////////////////////////////*/
-
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
 .contenedor{
     width: 100vw;
     height: 100vh;
@@ -27,13 +30,19 @@
 .navbar{
     grid-column: 1/5;
     grid-row: 1/2;
+    width: 100vw;
     background-color: #2F4858;
 }
 .navbar-nav {
     display: flex;
-    justify-content: space-around;
-    width: 70%;
+    justify-content: space-evenly;
+    width: 100%;
     text-align: center;
+}
+.nav-item{
+    background-color: #455661;
+    border-radius: 0.4rem;
+    font-size: 1rem;
 }
 
 .headerLogo {
@@ -61,7 +70,9 @@
     align-items: center;
 }
 .heroContenido{
+    margin-top: 20%;
     width: 100%;
+    height: 80%;
 }
 
 .heroTextos{
@@ -74,60 +85,59 @@
 
 .heroTitulo {
     color: #fff;
-    width: 600px;
-    height: 120px;
-    font-size: 50px;
+    width: 40rem;
+    height: 8rem;
+    font-size: 3rem;
     background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 30px;
+    padding-top: 2rem;
     text-align: center;
 }
 
 .heroTexto {
     text-align: center;
-    font-size: 30px;
-    margin-top: 10px;
+    font-size: 2rem;
+    margin-top: 0.6rem;
     background-color: rgba(255, 255, 255, 0.5);
-    width: 350px;
+    width: 22rem;
 
 }
 
 .heroBoton {
-    margin-top: 2rem;
     margin-left: 4rem;
 }
 
 .heroBoton a{
     color: #fff;
     text-decoration: none;
-    font-size: 20px;
-    padding: 15px;
+    font-size: 1.4rem;
+    padding: 1rem;
     background-color: rgba(0, 0, 0, 0.1);
-    border: 5px solid #444;
+    border: 0.3rem solid #444;
     transition: all 0.3s;
 }
 
 .heroBoton a:hover {
     color: #fff;
     background-color: #000;
-    border: 5px solid #000;
+    background-color: #000;
     transition: all 0.3s;
 }
 
 .heroFlecha{
     text-align: center;
     width: 100%;
-    height: 1.6em;
     color: #eee;
+    padding-top: 6rem;
     animation-name: flechabajar;
     animation-duration: 1s;
     animation-iteration-count: infinite;
 }
 .heroFlecha i{
-    font-size: 1.6em;
-    line-height: 40px;
+    font-size: 1.5rem;
+    line-height: 2.5rem;
     background-color: #D7A2AF;
-    width: 1.6em;
-    height: 1.6em;
+    width: 2.5rem;
+    height: 2.5rem;
     border-radius: 50%;
 }
 
@@ -148,7 +158,7 @@
     grid-column: 1/5;
     grid-row: 3/4;
     background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
-    padding-top: 80px;
+    padding-top: 5rem;
     width: 100vw;
     height: auto;
     display: flex;
@@ -157,16 +167,15 @@
     align-items: center;
 }
 .serviciosCard{
-    width: 250px;
-    height: 400px;
+    width: 15%;
+    height: 23rem;
     text-align: center;
 }
 
 .serviciosCardImg{
-    width: 230px;
-    height: 230px;
+    width: 100%;
     border-radius: 50%;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.2);
     transition: all 0.5s;
 }
 .serviciosCardImg:hover{
@@ -175,77 +184,55 @@
 }
 
 .img1{
-    border: 10px solid #fabfb757;
+    border: 0.8rem solid #fabfb757;
 }
 .img2{
-    border: 10px solid #57423f56;
+    border: 0.8rem solid #57423f56;
 }
 .img3{
-    border: 10px solid #b9cef863;
+    border: 0.8rem solid #b9cef863;
 }
 .img4{
-    border: 10px solid #bfa6a277;
+    border: 0.8rem solid #bfa6a277;
 }
 .img5{
-    border: 10px solid #8297c04f;
+    border: 0.8rem solid #8297c04f;
 }
 
 .serviciosCardSub{
     color: #666;
-    padding: 5px;
-    font-size: 25px;
-    border-bottom: 3px solid #666;
+    padding: 0.3rem;
+    font-size: 1.5rem;
+    border-bottom: 0.2rem solid #666;
 }
 
-.sobreNosotros{
+.consejos{
     grid-column: 1/5;
     grid-row: 4/5;
     width: 100vw;
-    height: 400px;
-    background-image: url(../img/background2.jpg);
-    background-position-y: -190px;
-    background-size: cover;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    background-image: linear-gradient(to top, #a8edea 0%, #fed6e3 100%);
+    margin: 0px;
+    padding: 1rem;
 }
 
-.textoUno{
-    width: 40%;
-    padding: 40px;
+
+.carousel{
+    padding: 0%;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.3);
 }
-.textoUnoTitulo{
+
+.uñas{
+    border-radius: 0.4rem;
+}
+.consejosTextos h2,p{
     text-align: center;
-    width: 150px;
-    background-color: rgba(255, 255, 255, 0.5);
-    font-size: 40px;
 }
-.textoUnoImg{
-    margin-left: 20px;
-    width: 170px;
-    height: 170px;
-    background-color: rgba(255, 255, 255, 0.7);
-    border-radius: 50%;
-}
-.textoUnoParrafo{
-    text-align: center;
-    width: 350px;
-    background-color: rgba(0, 0, 0, 0.5);
+.consejosTextos h2{
+    background-color: #333;
     color: #fff;
-    font-size: 20px;
-}
-
-.textoDos{
-    width: 40%;
-}
-
-.textoDosParrafo{
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 10px;
-    text-align: center;
-    width: 100%;
-    font-size: 20px;
-    color: #fff;
+    font-size: 1.6rem;
+    height: 4rem;
+    line-height: 4rem;
 }
 
 /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
@@ -305,7 +292,10 @@
     color: #333;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
 }
-.serviciosPagCard img:hover{
+.servImg{
+    width: 60%;
+}
+.servImg:hover{
     cursor: zoom-in;
     transform: scale(1.5);
     border-radius: 0px;
@@ -443,7 +433,7 @@
     width: 100vw;
     height: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     padding-top: 20px;
 }
 
@@ -457,7 +447,7 @@
     width: 100vw;
     height: auto;
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column;
     padding-top: 20px;
 }
 
@@ -523,115 +513,16 @@
 
 /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
 
-    .hero{
-        background-position: 100%;
-        width: 100vw;
-        height: 600px;
-    }
-    
-    .heroContenido {
-        top: 280px;
-        left: 60px;
-    }
-    
-    
-    
-    .heroTitulo {
-        width: 400px;
-        height: 100px;
-        font-size: 30px;
-        padding-top: 30px;
-    }
-    
-    .heroTexto {
-        font-size: 25px;
-        margin-top: 10px;
-        width: 300px;
-    }
-    
-    .heroBoton a{
-        text-decoration: none;
-        font-size: 15px;
-        padding: 10px;
-        border: 3px solid #444;
+    .heroFlecha{
+        padding-top: 1.5rem;
     }
 
-
-    .servicios{
-        padding-top: 80px;
-        height: auto;
-    }
     .serviciosCard{
-        width: 170px;
-        height: 300px;
-        text-align: center;
+        width: 28%;
     }
-    
     .serviciosCardImg{
-        width: 170px;
-        height: 170px;
-    }
-    
-    .img1{
-        border: 7px solid #fabfb757;
-    }
-    .img2{
-        border: 7px solid #57423f56;
-    }
-    .img3{
-        border: 7px solid #b9cef863;
-    }
-    .img4{
-        border: 7px solid #bfa6a277;
-    }
-    .img5{
-        border: 7px solid #8297c04f;
-    }
-    
-    .serviciosCardSub{
-        padding: 5px;
-        font-size: 18px;
-        border-bottom: 2px solid #666;
-    }
-    
-    .sobreNosotros{
-        height: 350px;
-        background-position: center;
-        background-size: cover;
-        display: flex;
-        align-items: center;
-        flex-wrap: nowrap;
-    }
-    
-    .textoUno{
-        width: 40%;
-        padding: 40px;
-    }
-    .textoUnoTitulo{
-        font-size: 30px;
-    }
-    .textoUnoImg{
-        margin-left: 20px;
-        width: 140px;
-        height: 140px;
-        border-radius: 50%;
-    }
-    .textoUnoParrafo{
-        font-size: 18px;
-    }
-    
-    .textoDos{
-        width: 70%;
-    }
-    
-    .textoDosParrafo{
-        text-align: center;
         width: 80%;
-        font-size: 15px;
     }
-
-
-
 /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
 
 .serviciosHero{
@@ -730,68 +621,15 @@
 
 /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
 
-    .hero{
-    background-position: center;
-    width: 100vw;
-    height: 600px;
-    }
-
-    .servicios{
-        padding-top: 80px;
-        height: auto;
-    }
     .serviciosCard{
-        width: 250px;
-        height: 300px;
+        width: 44%;
         text-align: center;
-    }
-    
-    .serviciosCardImg{
-        width: 200px;
-        height: 200px;
     }
 
-    .serviciosCardSub{
-        padding: 5px;
-        font-size: 24px;
-        border-bottom: 2px solid #666;
+    .serviciosCardImg{
+        width: 60%;
     }
-    .sobreNosotros{
-        flex-wrap: wrap;
-    }
-    .textoUno{
-        width: 100%;
-        display: flex;
-        padding: 20px;
-        align-items: center;
-        justify-content: space-around
-    }
-    .textoUnoTitulo{
-        width: 200px;
-        background-color: rgba(255, 255, 255, 0.5);
-        font-size: 35px;
-    }
-    .textoUnoImg{
-        margin-right: 40px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-    }
-    .textoUnoParrafo{
-        width: 200px;
-        background-color: rgba(0, 0, 0, 0.5);
-        font-size: 21px;
-    }
-    
-    .textoDos{
-        width: 100%;
-    }
-    
-    .textoDosParrafo{
-        text-align: center;
-        width: 100%;
-        font-size: 17px;
-    }
+
 /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
 .serviciosHeroTextos{
     margin: 40px;
@@ -850,6 +688,41 @@
     font-size: 45px;
 }
 }
+/* /////////////////////////////////////////////////////////800px///////////////////////////////////////////////////////*/
+@media screen and (max-width:800px){
+
+    .heroTitulo{
+        width: 30rem;
+        height: 6rem;
+        font-size: 2rem;
+    }
+    
+    .heroTexto{
+        width: 20rem;
+        font-size: 1.4rem;
+    }
+    
+    .heroBoton{
+        margin-left: 3rem;
+    }
+    
+    .heroBoton a{
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+    
+    .heroFlecha {
+        padding-top: 5rem;
+    }
+    .serviciosCard{
+        width: 60%;
+        height: 25rem;
+    }
+    
+    .serviciosCardImg{
+        width: 70%;
+    }
+}
 
 /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
 
@@ -857,89 +730,30 @@
 
 
     /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
+    .heroFlecha{
+        display: none;
+    }
+
     .hero{
-        background-position: center;
-        width: 100vw;
-        height: 400px;
+        height: 70vh;
+    }
+    .heroTitulo{
+        padding-top: 1rem;
+        width: 20rem;
+        height: 4rem;
+        font-size: 1.6rem;
+    }
+    .heroTextos{
+        padding: 1rem;
     }
     
-    .heroContenido {
-        top: 230px;
-        left: 40px;
+    .heroTexto{
+        width: 13rem;
+        font-size: 1.1rem;
     }
     
-    
-    
-    .heroTitulo {
-        width: 280px;
-        height: 80px;
-        font-size: 23px;
-        padding-top: 30px;
-    }
-    
-    .heroTexto {
-        width: 230px;
-        font-size: 20px;
-        margin-top: 10px;
-    }
-    
-    .heroBoton a{
-        text-decoration: none;
-        font-size: 12px;
-        padding: 8px;
-        border: 3px solid #444;
-    }
-
-    .servicios{
-        padding-top: 80px;
-        width: 100vw;
-        height: auto;
-        }
-    .serviciosCard{
-        width: 350px;
-        height: 300px;
-        text-align: center;
-    }
-        
-    .serviciosCardImg{
-        width: 200px;
-        height: 200px;
-    }
-
-    
-    .serviciosCardSub{
-        padding: 5px;
-        font-size: 20px;
-        border-bottom: 2px solid #666;
-    }
-
-    .textoUno{
-        width: 100%;
-        padding: 20px;
-    }
-    .textoUnoTitulo{
-        width: 100px;
-        background-color: rgba(255, 255, 255, 0.5);
-        font-size: 35px;
-    }
-    .textoUnoImg{
-        width: 90px;
-        height: 90px;
-        margin-right: 20px;
-    }
-    .textoUnoParrafo{
-        width: 200px;
-        font-size: 20px;
-    }
-    
-    .textoDos{
-        width: 100%;
-    }
-    
-    .textoDosParrafo{
-        text-align: center;
-        width: 100%;
-        font-size: 15px;
+    .consejosTextos h2{
+        font-size: 1.4rem;
     }
 
     /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
@@ -1035,36 +849,10 @@
 
 
 
-/* /////////////////////////////////////////////////////////480px///////////////////////////////////////////////////////*/
-
-    @media screen and (max-width:480px){
-/* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
-    
-    .heroContenido{
-        top: 200px;
-        left: 20px;
+/* /////////////////////////////////////////////////////////420px///////////////////////////////////////////////////////*/
+@media screen and (max-width:420px) {
+    .serviciosCard{
+        width: 80%;
+        height: 18rem;
     }
-
-    .textoUno{
-        padding: 0px;
-    }
-
-    .textoUnoTitulo{
-        width: 100px;
-        font-size: 30px;
-    }
-
-    .textoUnoImg{
-        width: 80px;
-        height: 80px;
-        margin-right: 20px;
-    }
-    .textoUnoParrafo{
-        width: 150px;
-        font-size: 15px ;
-    }
-
-    .textoDosParrafo{
-        font-size: 15px;
-    }
-    }
+}
