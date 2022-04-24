@@ -10,7 +10,10 @@
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-    background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%);
+    background-image: url(../img/fondo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }
 .contenedor{
     width: 100vw;
@@ -153,7 +156,8 @@ html, body {
 .servicios{
     grid-column: 1/5;
     grid-row: 3/4;
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 0.5rem;
     padding-top: 5rem;
     width: 100vw;
     height: auto;
@@ -218,14 +222,16 @@ html, body {
 .uñas{
     border-radius: 0.4rem;
 }
-.consejosTextos{
+.consejosContenido{
     display: flex;
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
 }
 
-.consejosTextos h2{
+.consejosContenido h2{
     background-color: #333;
     color: #fff;
     font-size: 1.6em;
@@ -237,6 +243,11 @@ html, body {
 .consejosImg{
     margin-left: 20%;
     width: 55%;
+}
+.suelo{
+    background-color: #333;
+    width: 100%;
+    height: 60px;
 }
 /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
 
@@ -277,7 +288,6 @@ html, body {
 .serviciosPag{
     grid-column: 1/5;
     grid-row: 3/4;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     width: 100vw;
     height: auto;
     display: flex;
@@ -342,7 +352,116 @@ html, body {
 }
 
 /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
+.galeriaHero{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    width: 100vw;
+    height: 70vh;
+    background-color: #555;
+}
+.galeriaHeroTextos{
+    margin: 10%;
+    width: 40%;
+}
 
+.galeria {  
+    grid-column: 1/5;
+    grid-row: 3/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    gap: 0.5rem;
+    grid-template-areas:
+    "gal1 gal2 ilustracion ilustracion"
+    "gal3 gal4 ilustracion ilustracion"
+    "gal5 gal6 gal7 gal8"
+    "gal9 gal10 gal11 gal12";
+    margin: 0.5rem;
+}
+
+.imagenes{
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+}
+.gal1 { 
+    grid-area: gal1; 
+}
+
+.gal2 { 
+    grid-area: gal2; 
+}
+
+.ilustracion { 
+    grid-area: ilustracion; 
+    transform: rotateY(180deg);
+    border-radius: 0.5rem;
+    padding: 2rem;
+}
+
+.gal3 { 
+    grid-area: gal3; 
+}
+
+.gal4 {
+    grid-area: gal4; 
+}
+
+.gal5 {
+    grid-area: gal5; 
+}
+
+.gal6 { 
+    grid-area: gal6; 
+}
+
+.gal7 { 
+    grid-area: gal7; 
+}
+
+.gal8 { 
+    grid-area: gal8; 
+}
+
+.gal9 { 
+    grid-area: gal9; 
+}
+
+.gal10 { 
+    grid-area: gal10; 
+}
+
+.gal11 { 
+    grid-area: gal11; 
+}
+
+.gal12 { 
+    grid-area: gal12; 
+}
+
+
+/* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
+.nosotrosHero{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    width: 100vw;
+    height: 70vh;
+    background-color: #fff;
+}
+.nosotrosHeroTextos{
+    margin: 10%;
+    width: 40%;
+}
+
+.nosotros{
+    grid-column: 1/5;
+    grid-row: 3/4;
+    width: 100vw;
+    height: auto;
+}
+/* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
 /* /////////////////////////////////////////////////////////CONTACTO///////////////////////////////////////////////////////*/
 
 .contactoHero{
@@ -526,7 +645,6 @@ html, body {
 }
 
 
-
 /* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
 /* /////////////////////////////////////////////////////////1294px///////////////////////////////////////////////////////*/
 
@@ -576,7 +694,7 @@ html, body {
     font-size: 1rem;
 }
 
-
+}
 
 /* /////////////////////////////////////////////////////////960px///////////////////////////////////////////////////////*/
 
@@ -594,7 +712,7 @@ html, body {
     .serviciosCardImg{
         width: 60%;
     }
-
+}
 /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
 .serviciosHeroTextos{
     width: 50%;
