@@ -827,8 +827,9 @@ html, body {
         background-color: rgba(0, 0, 0, 0.1);
     }
     .consejosImg{
-        margin-left: 35%;
-        width: 40%;
+        margin-left: 30%;
+        width: 400px;
+        height: 400px;
     }
     .carousel{
     width: 60%;
@@ -879,6 +880,11 @@ html, body {
         width: 70%;
     }
 
+    .consejosImg{
+        margin-left: 25%;
+        width: 300px;
+        height: 300px;
+    }
 /* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
     .galeriaHero{
         height: 70vh;
@@ -924,6 +930,11 @@ html, body {
         font-size: 1.4rem;
     }
 
+    .consejosImg{
+        margin-left: 15%;
+        width: 250px;
+        height: 250px;
+    }
     /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
     .serviciosHero{
         height: 50vh;
@@ -996,21 +1007,25 @@ html, body {
         font-size: 1.1rem;
         line-height: 4rem;
     }
+
+    .consejosImg{
+        margin-left: 15%;
+        width: 240px;
+        height: 240px;
+    }
     /* /////////////////////////////////////////////////////////Servicios///////////////////////////////////////////////////////*/
     .serviciosCard{
         width: 80%;
         height: 18rem;
     }
-    .flip-card{
-        width: 250px;
-        height: 250px;
-    }
+
     .serviciosImg h2{
         font-size: 1.2rem;
     }
     .serviciosImg img {
         width: 250px;
         height: 250px;
+        margin-left: 10%;
     }
     /* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
     .ilustracion h2{
@@ -1018,10 +1033,12 @@ html, body {
         line-height: 3rem;
     }
     .ilustracion img{
-        width: 280px;
-        height: 280px;
+        width: 300px;
+        height: 300px;
+        margin-left: 10%;
     }
-        /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
+
+    /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
     .nosotrosInfo img{
         width: 300px;
         height: 300px;
@@ -1063,3 +1080,20 @@ html, body {
         margin: 0% auto;
     }
 }  
+
+@media screen and (max-width:370px) {
+    /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
+
+    .ilustracion img{
+        width: 250px;
+        height: 250px;
+        margin-left: 5%;
+    }
+    
+/* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
+
+    .flip-card{
+        width: 250px;
+        height: 250px;
+    }
+}
