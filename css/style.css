@@ -36,21 +36,9 @@ html, body {
     grid-row: 1/2;
     background-color: #333;
 }
-.navbar-nav{
-    width: 100%;
-    text-align: center;
-}
-.nav-item{
-    font-size: 1rem;
-    font-size: 1.1rem;
-}
 
-
-.headerLogo {
-    width: 4rem;
-    height: 4rem;
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 100%
+.headerLogo{
+    width: 80px;
 }
 
 /* /////////////////////////////////////////////////////////HEADER///////////////////////////////////////////////////////*/
@@ -62,11 +50,12 @@ html, body {
 .hero{
     grid-column: 1/5;
     grid-row: 2/3;
+    width: 100vw;
+    height: 100vh;
+
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-position: center;
-    width: 100vw;
-    height: 100vh;
     display: flex;
     align-items: center;
 }
@@ -128,7 +117,6 @@ html, body {
     text-align: center;
     width: 100%;
     color: #eee;
-    padding-top: 4.3rem;
     animation-name: flechabajar;
     animation-duration: 1s;
     animation-iteration-count: infinite;
@@ -393,51 +381,63 @@ html, body {
     justify-content: center;
 }
 .galeriaHeroTextos{
-    margin: 10%;
-    width: 40%;
+    margin: 0% 10%;
+    max-width: 100%;
+    min-width: 40%;
 }
 
 .galeriaHeroTextos h1{
     background-color: rgba(0, 0, 0, 0.6);
-    font-size: 3.4rem;
+    font-size: max(min(4rem), 5vw);
     color: #fff;
     text-align: center;
 }
 
-.galeria {  
-    padding-top: 5%;
+.galeriaHeroTextos p{
+    text-align: center;
+    font-size: max(min(1rem), 2vw);
+}
+.galeria{  
+    padding: 5%;
     grid-column: 1/5;
     grid-row: 3/4;
-    height: auto;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: grid;
+    gap: 0.7rem;
+    grid-auto-rows: minmax(min(400px, 35rem),1fr);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem),1fr));
 }
 
-.galeriaFotos div{
-    padding: 1rem;
+.ilustracion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 0.4rem;
+    background-color: #fff;
+}
+.ilustracion img{
+    width: 90%;
+    height: 90%;
+}
+.ilustracionTitulo{
+    color: #fff;
+    background-color: #333;
+    width: 100%;
+    height: 15%;
+    max-height: 4rem;
+    border-radius: 0.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+} 
+.ilustracionTitulo h2{
+    font-size: max(min(1.2rem), 2vw);
 }
 .imagenes{
+    border-radius: 0.4rem;
     width: 100%;
-    border-radius: 0.5rem;
-}
-
-.ilustracion img{
-    background-color: #fff;
-    width:300px;
-    height:300px;
-    border-radius: 100%;
-    padding: 1rem;
-    margin-left: 15%;
-    margin-bottom: 1rem;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-}
-.ilustracion h2{
-    color: #fff;
-    line-height: 4rem;
-    font-size: 1.3rem;
-    background-color: #333;
-    height: 60px;
-    text-align: center;
-    border-radius: 0.3rem;
 }
 
 /* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
@@ -747,11 +747,11 @@ html, body {
 }
 /* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
 
-.ilustracion img{
+/* .ilustracion img{
     width:250px;
     height:250px;
     margin-left: 5%;
-}
+} */
 /* /////////////////////////////////////////////////////////CONTACTO///////////////////////////////////////////////////////*/
 
 .contactoHeroTextos h1{
@@ -777,17 +777,6 @@ html, body {
 /* /////////////////////////////////////////////////////////992px///////////////////////////////////////////////////////*/
 
 @media screen and (max-width:992px) {
-    .nav-item{
-            background-color: #222;
-    }
-
-    /* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
-
-.ilustracion img{
-    width:250px;
-    height:250px;
-    margin-left: 5%;
-}
 
 /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
 
@@ -885,10 +874,7 @@ html, body {
         width: 300px;
         height: 300px;
     }
-/* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
-    .galeriaHero{
-        height: 70vh;
-    }
+
 /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
     .nosotrosHero{
         height: 70vh;
@@ -903,10 +889,6 @@ html, body {
     /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
     .heroFlecha{
         display: none;
-    }
-
-    .hero{
-        height: 50vh;
     }
     .heroTitulo{
         padding-top: 1rem;
@@ -941,27 +923,6 @@ html, body {
     }
     .serviciosHeroTextos{
         width: 70%;
-    }
-    /* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
-    .galeriaHero{
-        height: 50vh;
-    }
-    .galeriaHeroTextos{
-        width: 70%;
-    }
-    .galeriaHeroTextos h1{
-        font-size: 2.5rem;
-    }
-
-    .ilustracion{
-        width: 100%;
-        height: 100%;
-    }
-
-    .ilustracion img{
-        width: 400px;
-        height: 400px;
-        margin: 0 auto;
     }
     /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
     .nosotrosHero{
@@ -1027,17 +988,6 @@ html, body {
         height: 250px;
         margin-left: 10%;
     }
-    /* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
-    .ilustracion h2{
-        font-size: 1rem;
-        line-height: 3rem;
-    }
-    .ilustracion img{
-        width: 300px;
-        height: 300px;
-        margin-left: 10%;
-    }
-
     /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
     .nosotrosInfo img{
         width: 300px;
@@ -1082,14 +1032,7 @@ html, body {
 }  
 
 @media screen and (max-width:370px) {
-    /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
 
-    .ilustracion img{
-        width: 250px;
-        height: 250px;
-        margin-left: 5%;
-    }
-    
 /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
 
     .flip-card{
