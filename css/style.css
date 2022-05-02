@@ -20,14 +20,14 @@ html, body {
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 90px 1fr 1fr 1fr 160px;
+    grid-template-rows: auto 1fr 1fr 1fr 160px;
 }
 .containerAlt{
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 90px 1fr 1fr 160px;
+    grid-template-rows: auto 1fr 1fr 160px;
 } 
 
 /* /////////////////////////////////////////////////////////HEADERS///////////////////////////////////////////////////////*/
@@ -39,6 +39,8 @@ html, body {
 
 .headerLogo{
     width: 80px;
+    background-color: #eee;
+    border-radius: 50%;
 }
 
 /* /////////////////////////////////////////////////////////HEADER///////////////////////////////////////////////////////*/
@@ -52,57 +54,61 @@ html, body {
     grid-row: 2/3;
     width: 100vw;
     height: 100vh;
-
+    min-height: 50vh;
     background-image: url(../img/background.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 .heroContenido{
-    margin-top: 20%;
     width: 100%;
-    height: 80%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(43, 33, 33, 0.4);
 }
 
 .heroTextos{
-    width: 70%;
-    padding: 3rem;
+    width: 80%;
+    min-width: 60vw;
+    padding:0px 3rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
 }
 
 .heroTitulo {
     color: #fff;
     width: 100%;
-    height: 8rem;
-    font-size: 3em;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding-top: 2rem;
-    text-align: center;
+    font-size: max(min(2rem), 5vw);
+    text-align: left;
 }
 
 .heroTexto {
-    text-align: center;
-    font-size: 2em;
+    text-align: left;
+    font-size: max(min(1.2rem), 2vw);
     margin-top: 0.6rem;
-    background-color: rgba(255, 255, 255, 0.5);
-    width: 80%;
+    color: #D7A2AF;
+    width: 100%; 
 
 }
 
 .heroBoton {
-    margin-left: 4rem;
+    margin-left: 5%;
 }
 
 .heroBoton a{
     color: #fff;
     text-decoration: none;
-    font-size: 1.4rem;
-    padding: 0.6em;
-    background-color: rgba(0, 0, 0, 0.1);
-    border: 0.3rem solid #444;
+    font-size: max(min(1rem), 1.6vw); 
+    padding: 0.3em;
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 0.2rem solid rgba(255, 255, 255, 0.2);
     transition: all 0.3s;
 }
 
@@ -114,8 +120,10 @@ html, body {
 }
 
 .heroFlecha{
-    text-align: center;
     width: 100%;
+    margin-top: 4rem;
+    display: flex;
+    justify-content: center;
     color: #eee;
     animation-name: flechabajar;
     animation-duration: 1s;
@@ -123,7 +131,6 @@ html, body {
 }
 .heroFlecha i{
     font-size: 2rem;
-    border-radius: 50%;
 }
 
 @keyframes flechabajar {
@@ -143,19 +150,19 @@ html, body {
     grid-column: 1/5;
     grid-row: 3/4;
     background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 0.5rem;
-    padding-top: 5rem;
+    padding-top: 3rem;
     width: 100vw;
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
 }
 .serviciosCard{
-    width: 15%;
-    height: 23rem;
-    text-align: center;
+    width: 18%;
+    min-width: 180px;
+    height: 20rem;
+    min-height: 200px;
 }
 
 .serviciosCardImg{
@@ -170,25 +177,25 @@ html, body {
 }
 
 .img1{
-    border: 0.8rem solid #fabfb757;
+    border: 0.5rem solid #fabfb757;
 }
 .img2{
-    border: 0.8rem solid #57423f56;
+    border: 0.5rem solid #57423f56;
 }
 .img3{
-    border: 0.8rem solid #b9cef863;
+    border: 0.5rem solid #b9cef863;
 }
 .img4{
-    border: 0.8rem solid #bfa6a277;
+    border: 0.5rem solid #bfa6a277;
 }
 .img5{
-    border: 0.8rem solid #8297c04f;
+    border: 0.5rem solid #8297c04f;
 }
 
 .serviciosCardSub{
     color: #666;
-    padding: 0.6rem;
-    font-size: 1.8rem;
+    font-size: max(min(1.2rem), 2vw);
+    text-align: center;
 }
 
 .consejos{
@@ -198,45 +205,35 @@ html, body {
     height: auto;
     background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     margin: 0px;
-    padding: 1rem;
-}
-
-
-.carousel{
-    width: 35%;
-    padding: 0%;
+    padding:1rem;
 }
 
 .uñas{
     border-radius: 0.4rem;
 }
 .consejosContenido{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
     text-align: center;
     border-radius: 0.5rem;
-    margin-bottom: 1rem;
 }
 
 .consejosContenido h2{
     width: 100%;
     background-color: #333;
     color: #fff;
-    font-size: 1.6em;
-    height: 4rem;
-    line-height: 2.5em;
-    border-radius: 1rem;
+    font-size: max(min(16px,1.4rem), 2vw);
+    padding: 2%;
+    height: auto;
+    max-height: 50px;
+    border-radius: 0.5rem;
 }
 
 .consejosImg{
-    margin-left: 20%;
     background-color: #fff;
-    width: 350px;
-    height: 350px;
+    width: 60%;
+    min-width: 250px;
+    height: 60%;
+    min-height: 250px;
     border-radius: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -371,7 +368,7 @@ html, body {
     grid-column: 1/5;
     grid-row: 2/3;
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
     background-image: url(../img/galeria-background.svg);
     background-position: center;
     background-size: cover;
@@ -401,10 +398,9 @@ html, body {
     padding: 5%;
     grid-column: 1/5;
     grid-row: 3/4;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     display: grid;
     gap: 0.7rem;
-    grid-auto-rows: minmax(min(400px, 35rem),1fr);
+    grid-auto-rows: minmax(min(250px, 25rem),1fr);
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem),1fr));
 }
 
@@ -413,12 +409,13 @@ html, body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    border-radius: 0.4rem;
-    background-color: #fff;
 }
 .ilustracion img{
+    background-color: #fff;
     width: 90%;
     height: 90%;
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 .ilustracionTitulo{
     color: #fff;
@@ -438,6 +435,7 @@ html, body {
 .imagenes{
     border-radius: 0.4rem;
     width: 100%;
+    height: 100%;
 }
 
 /* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
@@ -724,18 +722,7 @@ html, body {
 
 @media screen and (max-width:1264px) {
 
-/* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
 
-    .heroFlecha{
-        padding-top: 1.3rem;
-    }
-
-    .serviciosCard{
-        width: 28%;
-    }
-    .serviciosCardImg{
-        width: 80%;
-    }
 /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
 
 .serviciosHeroTextos h1{
@@ -745,13 +732,7 @@ html, body {
 .serviciosHeroTextos p{
     font-size: 1rem;
 }
-/* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
 
-/* .ilustracion img{
-    width:250px;
-    height:250px;
-    margin-left: 5%;
-} */
 /* /////////////////////////////////////////////////////////CONTACTO///////////////////////////////////////////////////////*/
 
 .contactoHeroTextos h1{
@@ -799,32 +780,6 @@ html, body {
 
 @media screen and (max-width:960px){
 
-/* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
-    .heroTextos{
-        width: 80%;
-    }
-    .serviciosCard{
-        width: 44%;
-        text-align: center;
-    }
-
-    .serviciosCardImg{
-        width: 60%;
-    }
-    
-    .consejosContenido{
-        background-color: rgba(0, 0, 0, 0.1);
-    }
-    .consejosImg{
-        margin-left: 30%;
-        width: 400px;
-        height: 400px;
-    }
-    .carousel{
-    width: 60%;
-    padding: 0%;
-    }
-
 /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
     .serviciosHeroTextos{
         width: 50%;
@@ -840,40 +795,7 @@ html, body {
 /* /////////////////////////////////////////////////////////800px///////////////////////////////////////////////////////*/
 @media screen and (max-width:800px){
 
-    .heroTitulo{
-        height: 6rem;
-        font-size: 2em;
-    }
-    
-    .heroTexto{
-        font-size: 1.4em;
-    }
-    
-    .heroBoton{
-        margin-left: 3rem;
-    }
-    
-    .heroBoton a{
-        padding: 0.5rem;
-        font-size: 1em;
-    }
-    .heroFlecha{
-        padding-top: 6.4rem;
-    }
-    .serviciosCard{
-        width: 60%;
-        height: 25rem;
-    }
-    
-    .serviciosCardImg{
-        width: 70%;
-    }
 
-    .consejosImg{
-        margin-left: 25%;
-        width: 300px;
-        height: 300px;
-    }
 
 /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
     .nosotrosHero{
@@ -890,32 +812,9 @@ html, body {
     .heroFlecha{
         display: none;
     }
-    .heroTitulo{
-        padding-top: 1rem;
-        width: 100%;
-        height: 4rem;
-        font-size: 1.3em;
-    }
-    .heroTextos{
-        padding: 0.6rem;
-    }
-    
-    .heroTexto{
-        width: 80%;
-        font-size: 1em;
-    }
-    .heroBoton{
-        margin-left: 1rem;
-        font-size: 0.9rem;
-    }
-    .consejosTextos h2{
-        font-size: 1.4rem;
-    }
 
-    .consejosImg{
-        margin-left: 15%;
-        width: 250px;
-        height: 250px;
+    .heroTextos{
+        width: 100%;
     }
     /* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
     .serviciosHero{
@@ -959,26 +858,8 @@ html, body {
 
 /* /////////////////////////////////////////////////////////420px///////////////////////////////////////////////////////*/
 @media screen and (max-width:420px) {
-    .consejosTextos h2{
-        font-size: 1.1rem;
-        line-height: 4rem;
-    }
 
-    .consejosContenido h2{
-        font-size: 1.1rem;
-        line-height: 4rem;
-    }
-
-    .consejosImg{
-        margin-left: 15%;
-        width: 240px;
-        height: 240px;
-    }
     /* /////////////////////////////////////////////////////////Servicios///////////////////////////////////////////////////////*/
-    .serviciosCard{
-        width: 80%;
-        height: 18rem;
-    }
 
     .serviciosImg h2{
         font-size: 1.2rem;
@@ -988,6 +869,7 @@ html, body {
         height: 250px;
         margin-left: 10%;
     }
+
     /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
     .nosotrosInfo img{
         width: 300px;
