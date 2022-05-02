@@ -38,7 +38,8 @@ html, body {
 }
 
 .headerLogo{
-    width: 80px;
+    width: 4rem;
+    min-width: 50px;
     background-color: #eee;
     border-radius: 50%;
 }
@@ -229,12 +230,13 @@ html, body {
 
 .consejosImg{
     background-color: #fff;
-    width: 60%;
-    min-width: 250px;
-    height: 60%;
-    min-height: 250px;
+    width: 20rem;
+    min-width: 300px;
+    height: 20rem;
+    min-height: 300px;
     border-radius: 100%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
 }
 
 /* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
@@ -378,21 +380,20 @@ html, body {
     justify-content: center;
 }
 .galeriaHeroTextos{
-    margin: 0% 10%;
-    max-width: 100%;
-    min-width: 40%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: end;
+    padding-right: 5%;
 }
 
 .galeriaHeroTextos h1{
-    background-color: rgba(0, 0, 0, 0.6);
     font-size: max(min(4rem), 5vw);
     color: #fff;
-    text-align: center;
 }
 
 .galeriaHeroTextos p{
-    text-align: center;
     font-size: max(min(1rem), 2vw);
+    color: #D7A2AF;
 }
 .galeria{  
     padding: 5%;
@@ -444,7 +445,7 @@ html, body {
     grid-column: 1/5;
     grid-row: 2/3;
     width: 100vw;
-    height: 100vh;
+    height: 90vh;
     background-image: url(../img/nosotros-background.jpg);
     background-size:cover;
     background-position: center;
@@ -454,15 +455,20 @@ html, body {
     justify-content: center;
 }
 .nosotrosHeroTextos{
-    margin: 10%;
-    width: 40%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-right: 5%;
+    text-align: end;
 }
 
 .nosotrosHeroTextos h1{
-    background-color: rgba(0, 0, 0, 0.6);
-    font-size: 3.4rem;
+    font-size: max(min(2.5rem), 5vw);
     color: #fff;
-    text-align: center;
+}
+
+.nosotrosHeroTextos p{
+    font-size: max(min(1rem), 2vw);
+    color: #D7A2AF;
 }
 
 .nosotros{
@@ -479,12 +485,13 @@ html, body {
 
 .nosotrosInfo img{
     background-color: #fff;
-    width:400px;
-    height:400px;
+    width: 20rem;
+    min-width: 300px;
+    height: 20rem;
+    min-height: 250px;
     border-radius: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
 }
 .infoTextos{
     background-color: rgba(255, 255, 255, 0.4);
@@ -494,8 +501,9 @@ html, body {
     text-align: center;
     background-color: #333;
     border-radius: 0.5rem;
-    height: 50px;
-    line-height:3.5rem;
+    font-size: max(min(1.4rem), 3vw);
+    height: auto;
+    max-height: 50px;
     color: #fff;
 }
 
@@ -513,18 +521,18 @@ html, body {
     text-align: center;
     background-color: #333;
     border-radius: 0.5rem;
-    height: 50px;
-    line-height: 3.5rem;
+    font-size: max(min(1.4rem), 3vw);
+    height: auto;
+    max-height: 50px;
     color: #fff;
 }
 .ubiImg img{
-    margin-left: 20%;
     background-color: #fff;
-    width:350px;
-    height:350px;
+    width: 20rem;
+    min-width: 300px;
+    height: 20rem;
+    min-height: 250px;
     border-radius: 100%;
-    padding: 1rem;
-    margin-bottom: 1rem;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
@@ -759,16 +767,6 @@ html, body {
 
 @media screen and (max-width:992px) {
 
-/* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
-
-.nosotrosHeroTextos{
-    width: 60%;
-}
-
-.nosotrosUbi img{
-    display: none;
-}
-
 
 /* /////////////////////////////////////////////////////////CONTACTO///////////////////////////////////////////////////////*/
 
@@ -792,17 +790,6 @@ html, body {
         height: 300px;
     }
 }
-/* /////////////////////////////////////////////////////////800px///////////////////////////////////////////////////////*/
-@media screen and (max-width:800px){
-
-
-
-/* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
-    .nosotrosHero{
-        height: 70vh;
-    }
-}
-
 /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
 
 @media screen and (max-width:600px){
@@ -822,17 +809,6 @@ html, body {
     }
     .serviciosHeroTextos{
         width: 70%;
-    }
-    /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
-    .nosotrosHero{
-        height: 50vh;
-    }
-    .nosotrosHeroTextos{
-        width: 70%;
-    }
-
-    .nosotrosHeroTextos h1{
-        font-size: 2rem;
     }
     /* /////////////////////////////////////////////////////////CONTACTO///////////////////////////////////////////////////////*/
     .contactoHero{
@@ -871,18 +847,6 @@ html, body {
     }
 
     /* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
-    .nosotrosInfo img{
-        width: 300px;
-        height: 300px;
-    }
-
-    .infoTextos h2{
-        font-size: 1.3rem;
-    }
-
-    .ubiContenido h2{
-        font: 1rem;
-    }
 
     .ubiContenido iframe{
         height: 300px;
