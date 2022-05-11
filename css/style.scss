@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;1,700&display=swap');
+
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    font-family: 'PT Serif', serif;
+}
+
+/* /////////////////////////////////////////////////////////VARIABLES///////////////////////////////////////////////////////*/
+
+/* Colores */
+$rosa:#D7A2AF;
+$blanco:#eee;
+$gris:#333;
+$negro:#111;
+/* Medidas */
+$titleSize:max(min(2rem), 5vw);
+$subSize:max(min(16px,1.4rem), 2vw);
+$pSize:max(min(1.2rem), 2vw);
+/* /////////////////////////////////////////////////////////CONTENEDORES///////////////////////////////////////////////////////*/
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    background-image: url(../img/fondo.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+} 
+.contenedor{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 1fr 160px;
+}
+.containerAlt{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto 1fr 1fr 160px;
+} 
+
+/* /////////////////////////////////////////////////////////HEADERS///////////////////////////////////////////////////////*/
+.navbar{
+    grid-column: 1/5;
+    grid-row: 1/2;
+    background-color: $gris;
+}
+
+.headerLogo{
+    width: 4rem;
+    min-width: 50px;
+    height: 4rem;
+    background-color: $blanco;
+    border-radius: 50%;
+}
+
+/* /////////////////////////////////////////////////////////HEADER///////////////////////////////////////////////////////*/
+
+
+/* /////////////////////////////////////////////////////////INDEX///////////////////////////////////////////////////////*/
+
+@import "__index.scss";
+
+
+/* /////////////////////////////////////////////////////////SERVICIOS///////////////////////////////////////////////////////*/
+@import "__servicios.scss";
+
+/* /////////////////////////////////////////////////////////GALERIA///////////////////////////////////////////////////////*/
+@import "__galeria.scss";
+
+/* /////////////////////////////////////////////////////////NOSOTROS///////////////////////////////////////////////////////*/
+@import "__nosotros.scss";
+
+/* /////////////////////////////////////////////////////////CONTACTO///////////////////////////////////////////////////////*/
+@import "__contacto.scss";
+
+/* /////////////////////////////////////////////////////////FOOTERS///////////////////////////////////////////////////////*/
+
+.pie{
+    grid-column: 1/5;
+    grid-row: 5/6;
+    background-color: $gris;
+    color: $blanco;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    padding-top: 20px;
+}
+
+.pieAlt{
+    grid-column: 1/5;
+    grid-row: 4/5;
+    background-color: $gris;
+    color: $blanco;
+    font-size: 1.4rem;
+    text-align: center;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-flow: column;
+    padding-top: 20px;
+}
+
+.pieRedes{
+    width: 100%;
+    a{
+        color: $blanco;
+        font-size: 2.4em;
+        transition: all 0.2s;
+        &:hover{
+            color: $rosa;
+            font-size: 2.5em;
+            transition: all 0.2s;
+        }
+    }
+    
+}
+
+
+.pieWhatsapp{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 3rem;
+    height: 3rem;
+    img{
+        width: 100%;
+    }
+}
+
+/* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////1294px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:1264px) {
+
+/* /////////////////////////////////////////////////////////FOOTERS///////////////////////////////////////////////////////*/
+
+.pie{
+    font-size: 1rem;
+}
+
+.pieAlt{
+    font-size: 1rem;
+}
+
+}
+

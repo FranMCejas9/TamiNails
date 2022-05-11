@@ -1,0 +1,155 @@
+.contactoHero{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    width: 100vw;
+    height: 90vh;
+    background-image: url(../img/background4.jpg);
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.contactoHeroTextos{
+    @extend .galeriaHeroTextos;
+}
+
+
+.contacto{
+    grid-column: 1/5;
+    grid-row: 3/4;
+    width: 100vw;
+    height: auto;
+    padding: 2rem;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0%;
+}
+.contactoContenido{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+}
+.contactoTitulo{
+    @extend .consejosSub
+}
+.contactoImg{
+    margin: 0% auto;
+    background-color: $blanco;
+    width: 350px;
+    height: 350px;
+    border-radius: 100%;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+.contactoFormulario{
+    width: 100%;
+    padding: 2rem;
+    height: 500px;
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column wrap;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.2);
+    textarea{
+        resize: none;
+        padding: 0.3rem;
+        background-color: $rosa;
+        transition: all 0.3s;
+        &:focus{
+            background-color: $gris;
+            color: $blanco;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.formularioTitulo{
+    @extend .consejosSub
+}
+.formularioContenido{
+    input{
+        width: 100%;
+        height: 2rem;
+        padding: 0.3rem;
+        background-color: $rosa;
+        transition: all 0.3s;
+        &:focus{
+            background-color: $gris;
+            color: $blanco;
+            transition: all 0.3s;
+        }
+    }
+}
+.formularioBotones{
+    input{
+        width: 6rem;
+        height: 2.6rem;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 0.6rem;
+        border: 0.2rem solid $gris;
+        font-size: 1rem;
+        transition: all 0.3s;
+        &:hover{
+            color: $blanco;
+            background-color: $negro;
+            border: 3px solid $negro ;
+            transition: all 0.3s;
+        }
+    }
+}
+
+/* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
+
+/* /////////////////////////////////////////////////////////992px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:992px) {    
+    .contactoFormulario{
+            margin-top: 3rem;
+        }
+    }    
+
+    
+/* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:600px){
+
+    .contactoHeroTextos{
+        width: 70%;
+    }
+    
+    .contactoFormulario{
+        padding: 0.3rem;
+    }
+    .formularioBotones{
+        input{
+            width: 6rem;
+            height: 2rem;
+            border: 2px solid $gris;
+            font-size: 1rem;
+        }
+    }
+}
+/* /////////////////////////////////////////////////////////420px///////////////////////////////////////////////////////*/
+@media screen and (max-width:420px) {
+    .contactoTitulo{
+        img{
+            margin-top: 0.5rem;
+            width: 300px;
+            height: 300px;
+        }
+    }
+
+    .formularioContenido {
+        input{
+            width: 90%;
+        }
+    }
+    #comentarios{
+        width: 90%;
+        margin: 0% auto;
+    }
+}  

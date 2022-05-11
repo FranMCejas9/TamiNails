@@ -1,0 +1,100 @@
+.nosotrosHero{ 
+    grid-column: 1/5;
+    grid-row: 2/3;
+    width: 100vw;
+    height: 90vh;
+    background-image: url(../img/nosotros-background.jpg);
+    background-size:cover;
+    background-position: center;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+.nosotrosHeroTextos{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    padding-right: 5%;
+    text-align: end;
+    h1{
+        font-size: $titleSize;
+        color: $blanco;
+    }
+    p{
+        font-size: $pSize;
+        color: $rosa;
+    }
+}
+
+.nosotros{
+    grid-column: 1/5;
+    grid-row: 3/4;
+    width: 100vw;
+    height: auto;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.nosotrosInfo{
+    padding: 2rem;
+    img{
+        background-color: $blanco;
+        width: 20rem;
+        min-width: 300px;
+        height: 20rem;
+        min-height: 250px;
+        border-radius: 100%;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        margin-bottom: 2rem;
+    }
+}
+
+.infoTextos{
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 1.3rem;
+    h2{
+        @extend .consejosSub
+    }
+}
+
+.nosotrosUbi{
+    margin-top: 1rem;
+    padding: 2rem;
+    iframe{
+        margin-top: 1rem;
+        width: 100%;
+    }
+    h2{
+        @extend .consejosSub
+    }
+}
+
+.ubiImg {
+    img{
+    background-color: $blanco;
+    width: 20rem;
+    min-width: 300px;
+    height: 20rem;
+    min-height: 250px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+/* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/
+
+/* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:600px){
+    .nosotrosHero{
+        height: 80vh;
+    }
+}
+
+
+/* /////////////////////////////////////////////////////////420px///////////////////////////////////////////////////////*/
+@media screen and (max-width:420px) {
+    .ubiContenido {
+        iframe{
+            height: 400px;
+        }
+    }
+}

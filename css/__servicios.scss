@@ -1,0 +1,147 @@
+.serviciosHero{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    width: 100vw;
+    height: 90vh;
+    background-image: url(../img/background3.jpg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+.serviciosHeroTextos{
+    @extend .galeriaHeroTextos;
+    p{
+        width: 60%;
+        float: right;
+    }
+    
+}
+.serviciosPag{
+    padding-top: 5%;
+    grid-column: 1/5;
+    grid-row: 3/4;
+    width: 100vw;
+    height: auto;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+.serviciosImg{
+    width: 350px;
+    height: 350px;
+    border-radius: 0.3rem;
+    h2{  
+        @extend .consejosSub
+    }
+    img{
+        background-color: $blanco;
+        width: 350px;
+        height: 350px;
+        border-radius: 100%;
+        padding: 1rem;
+        margin-bottom: 1rem;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.flip-card {
+    background-color: transparent;
+    width: 350px;
+    height: 350px;
+    margin: 2rem;
+    perspective: 1000px;
+    border-radius: 1rem;
+    &:hover .flip-card-inner {
+        transform: rotateY(180deg);
+    }
+}
+
+
+.flip-card-inner{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    border-radius: 1rem;
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 1rem;
+}
+.cardImg{
+    width: 100%;
+    height: 100%;
+    border-radius: 1rem;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: $negro;
+}
+
+
+.flip-card-back {
+    background-color: $gris;
+    color: $blanco;
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+
+/* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
+
+/* /////////////////////////////////////////////////////////960px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:960px){
+        .serviciosHeroTextos{
+            width: 50%;
+        }
+        .serviciosImg{
+            margin: 2rem;
+            img{
+                width: 300px;
+                height: 300px;
+            }
+        }
+    }
+
+    /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:600px){
+
+    .serviciosHero{
+        height: 80vh;
+    }
+    .serviciosHeroTextos{
+        width: 70%;
+    }
+}
+
+/* /////////////////////////////////////////////////////////420px///////////////////////////////////////////////////////*/
+@media screen and (max-width:420px) {
+        img {
+            width: 250px;
+            height: 250px;
+            margin-left: 10%;
+        }
+    }
+
+
+/* /////////////////////////////////////////////////////////370px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:370px) {
+        .flip-card{
+            width: 250px;
+            height: 250px;
+        }
+    }

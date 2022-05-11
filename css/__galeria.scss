@@ -1,0 +1,79 @@
+.galeriaHero{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    width: 100vw;
+    height: 90vh;
+    background-image: url(../img/galeria-background.svg);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-end;
+    justify-content: center;
+}
+.galeriaHeroTextos{
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: end;
+    padding-right: 5%;
+    h1{
+        font-size: $titleSize;
+        color: $blanco;
+    }
+    p{
+        font-size: $pSize;
+        color: $rosa;
+    }
+}
+.galeria{  
+    padding: 5%;
+    grid-column: 1/5;
+    grid-row: 3/4;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    display: grid;
+    grid-auto-rows: minmax(min(250px, 25rem),1fr);
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem),1fr));
+}
+
+.ilustracion{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    img{
+        background-color: $blanco;
+        width: 80%;
+        height: 80%;
+        border-radius: 100%;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    }
+}
+.ilustracionTitulo{
+    color: $blanco;
+    background-color: $gris;
+    width: 100%;
+    height: 3.5rem;
+    border-radius: 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.3rem;
+    h2{
+        @extend .consejosSub
+    }
+}
+.imagenes{
+    padding: 2rem;
+    border-radius: 4rem;
+    width: 100%;
+    height: 100%;
+}
+
+/* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/
+/* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:600px){
+    .galeriaHero{
+        height: 80vh;
+    }
+}

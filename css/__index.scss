@@ -1,0 +1,205 @@
+.hero{
+    grid-column: 1/5;
+    grid-row: 2/3;
+    width: 100vw;
+    height: 100vh;
+    min-height: 50vh;
+    background-image: url(../img/background.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+.heroContenido{
+    width: 100%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(43, 33, 33, 0.4);
+}
+
+.heroTextos{
+    width: 80%;
+    min-width: 60vw;
+    padding:0px 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.heroTitulo {
+    color: $blanco;
+    width: 100%;
+    font-size: $titleSize;
+    text-align: left;
+}
+
+.heroTexto {
+    text-align: left;
+    font-size: $pSize;
+    margin-top: 0.6rem;
+    color: $rosa;
+    width: 100%; 
+
+}
+
+.heroBoton {
+    margin-left: 5%;
+    a{
+        color: $blanco;
+        text-decoration: none;
+        font-size: max(min(1rem), 1.6vw); 
+        padding: 0.3em;
+        background-color: rgba(255, 255, 255, 0.2);
+        border: 0.2rem solid rgba(255, 255, 255, 0.2);
+        transition: all 0.3s;
+        &:hover {
+            color: $blanco;
+            background-color: $negro;
+            background-color: $negro;
+            transition: all 0.3s;
+        }
+    }
+}
+
+.heroFlecha{
+    width: 100%;
+    margin-top: 10rem;
+    display: flex;
+    justify-content: center;
+    color: $blanco;
+    animation-name: flechabajar;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    i{
+    font-size: 2rem;
+}
+}
+
+@keyframes flechabajar {
+    0%{
+        transform: translateY(0px);
+    }
+    50%{
+        transform: translateY(10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.servicios{
+    grid-column: 1/5;
+    grid-row: 3/4;
+    background-color: rgba(255, 255, 255, 0.4);
+    padding-top: 3rem;
+    width: 100vw;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+.serviciosCard{
+    width: 18%;
+    min-width: 200px;
+    height: 20rem;
+    min-height: 200px;
+}
+
+.serviciosCardImg{
+    width: 30%;
+    height: auto;
+    min-width: 200px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.2);
+    transition: all 0.5s;
+    &:hover{
+        transform: scale(1.1); 
+        transition: all 0.5s;
+    }
+}
+
+.img1{
+    border: 0.5rem solid #fabfb757;
+}
+.img2{
+    border: 0.5rem solid #57423f56;
+}
+.img3{
+    border: 0.5rem solid #b9cef863;
+}
+.img4{
+    border: 0.5rem solid #bfa6a277;
+}
+.img5{
+    border: 0.5rem solid #8297c04f;
+}
+
+.serviciosCardSub{
+    color: $gris;
+    font-size: max(min(1.2rem), 2vw);
+    text-align: center;
+}
+
+.consejos{
+    grid-column: 1/5;
+    grid-row: 4/5;
+    width: 100vw;
+    height: auto;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0px;
+    padding:1rem;
+}
+
+.uñas{
+    border-radius: 0.4rem;
+}
+.consejosContenido{
+    text-align: center;
+    border-radius: 0.5rem;
+}
+.consejosSub{
+    width: 100%;
+    background-color: $gris;
+    color: $blanco;
+    font-size: $subSize;
+    padding: 2%;
+    height: auto;
+    max-height: 50px;
+    border-radius: 0.5rem;
+}
+.consejosImg{
+    background-color: $blanco;
+    width: 20rem;
+    min-width: 300px;
+    height: 20rem;
+    min-height: 300px;
+    border-radius: 100%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
+}
+
+/* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/
+
+/* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:600px){
+
+    .hero{
+        height: 80vh;
+    }
+    
+    .heroFlecha{
+        display: none;
+    }
+
+    .heroTextos{
+        width: 100%;
+    }
+}
