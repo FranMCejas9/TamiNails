@@ -152,7 +152,6 @@
     grid-row: 4/5;
     width: 100vw;
     height: auto;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     margin: 0px;
     padding:1rem;
 }
@@ -165,12 +164,10 @@
     border-radius: 0.5rem;
 }
 .consejosSub{
+    text-align: center;
     width: 100%;
-    background-color: $gris;
-    color: $blanco;
+    color: $rosa;
     font-size: $subSize;
-    padding: 2%;
-    height: auto;
     max-height: 50px;
     border-radius: 0.5rem;
 }

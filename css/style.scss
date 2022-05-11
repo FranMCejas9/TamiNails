@@ -12,7 +12,7 @@
 /* Colores */
 $rosa:#D7A2AF;
 $blanco:#eee;
-$gris:#333;
+$gris:#D7A2AF;
 $negro:#111;
 /* Medidas */
 $titleSize:max(min(2rem), 5vw);
@@ -22,24 +22,20 @@ $pSize:max(min(1.2rem), 2vw);
 html, body {
     max-width: 100%;
     overflow-x: hidden;
-    background-image: url(../img/fondo.svg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 } 
 .contenedor{
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr 1fr 160px;
+    grid-template-rows: auto 1fr 1fr 1fr 1fr;
 }
 .containerAlt{
     width: 100vw;
     height: 100vh;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: auto 1fr 1fr 160px;
+    grid-template-rows: auto 1fr 1fr 1fr;
 } 
 
 /* /////////////////////////////////////////////////////////HEADERS///////////////////////////////////////////////////////*/
@@ -82,12 +78,15 @@ html, body {
 .pie{
     grid-column: 1/5;
     grid-row: 5/6;
-    background-color: $gris;
+    background-image: url(../img/footer.svg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
     color: $blanco;
     font-size: 1.4rem;
     text-align: center;
     width: 100vw;
-    height: auto;
+    height: 300px;
     display: flex;
     flex-flow: column;
     padding-top: 20px;
@@ -96,12 +95,15 @@ html, body {
 .pieAlt{
     grid-column: 1/5;
     grid-row: 4/5;
-    background-color: $gris;
+    background-image: url(../img/footer.svg);
+    background-repeat: none;
+    background-position: center;
+    background-size: cover;
     color: $blanco;
     font-size: 1.4rem;
     text-align: center;
     width: 100vw;
-    height: auto;
+    height: 300px;
     display: flex;
     flex-flow: column;
     padding-top: 20px;
@@ -109,12 +111,13 @@ html, body {
 
 .pieRedes{
     width: 100%;
+    margin-top: 8rem;
     a{
         color: $blanco;
         font-size: 2.4em;
         transition: all 0.2s;
         &:hover{
-            color: $rosa;
+            color: $negro;
             font-size: 2.5em;
             transition: all 0.2s;
         }

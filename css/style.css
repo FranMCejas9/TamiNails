@@ -14,10 +14,6 @@
 html, body {
   max-width: 100%;
   overflow-x: hidden;
-  background-image: url(../img/fondo.svg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
 }
 
 .contenedor {
@@ -25,7 +21,7 @@ html, body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr 1fr 160px;
+  grid-template-rows: auto 1fr 1fr 1fr 1fr;
 }
 
 .containerAlt {
@@ -33,14 +29,14 @@ html, body {
   height: 100vh;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: auto 1fr 1fr 160px;
+  grid-template-rows: auto 1fr 1fr 1fr;
 }
 
 /* /////////////////////////////////////////////////////////HEADERS///////////////////////////////////////////////////////*/
 .navbar {
   grid-column: 1/5;
   grid-row: 1/2;
-  background-color: #333;
+  background-color: #D7A2AF;
 }
 
 .headerLogo {
@@ -200,7 +196,7 @@ html, body {
 }
 
 .serviciosCardSub {
-  color: #333;
+  color: #D7A2AF;
   font-size: max(1.2rem, 2vw);
   text-align: center;
 }
@@ -210,7 +206,6 @@ html, body {
   grid-row: 4/5;
   width: 100vw;
   height: auto;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   margin: 0px;
   padding: 1rem;
 }
@@ -224,13 +219,11 @@ html, body {
   border-radius: 0.5rem;
 }
 
-.consejosSub, .formularioTitulo, .contactoTitulo, .nosotrosUbi h2, .infoTextos h2, .ilustracionTitulo h2, .serviciosImg h2 {
+.consejosSub, .formularioTitulo, .contactoTitulo, .nosotrosUbi h2, .infoTextos h2, .ilustracionTitulo, .serviciosImg h2 {
+  text-align: center;
   width: 100%;
-  background-color: #333;
-  color: #eee;
+  color: #D7A2AF;
   font-size: max(min(16px, 1.4rem), 2vw);
-  padding: 2%;
-  height: auto;
   max-height: 50px;
   border-radius: 0.5rem;
 }
@@ -294,14 +287,15 @@ html, body {
   width: 350px;
   height: 350px;
   border-radius: 0.3rem;
+  text-align: center;
 }
 .serviciosImg img {
   background-color: #eee;
-  width: 350px;
-  height: 350px;
+  width: 300px;
+  height: 300px;
   border-radius: 100%;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin: 2rem 0px 2rem 0px;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
@@ -348,7 +342,7 @@ html, body {
 }
 
 .flip-card-back {
-  background-color: #333;
+  background-color: #D7A2AF;
   color: #eee;
   transform: rotateY(180deg);
   display: flex;
@@ -431,7 +425,6 @@ html, body {
   padding: 5%;
   grid-column: 1/5;
   grid-row: 3/4;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   display: grid;
   grid-auto-rows: minmax(min(250px, 25rem), 1fr);
   grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem), 1fr));
@@ -445,23 +438,19 @@ html, body {
 }
 .ilustracion img {
   background-color: #eee;
-  width: 80%;
-  height: 80%;
+  width: 70%;
+  height: 70%;
   border-radius: 100%;
   box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .ilustracionTitulo {
-  color: #eee;
-  background-color: #333;
-  width: 100%;
-  height: 3.5rem;
-  border-radius: 0.3rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 0.3rem;
+  margin: 1rem 0px 1rem 0px;
 }
+
 .imagenes {
   padding: 2rem;
   border-radius: 4rem;
@@ -511,7 +500,6 @@ html, body {
   grid-row: 3/4;
   width: 100vw;
   height: auto;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 
 .nosotrosInfo {
@@ -584,7 +572,6 @@ html, body {
   width: 100vw;
   height: auto;
   padding: 2rem;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
   margin: 0%;
 }
 
@@ -623,7 +610,7 @@ html, body {
   transition: all 0.3s;
 }
 .contactoFormulario textarea:focus {
-  background-color: #333;
+  background-color: #D7A2AF;
   color: #eee;
   transition: all 0.3s;
 }
@@ -636,7 +623,7 @@ html, body {
   transition: all 0.3s;
 }
 .formularioContenido input:focus {
-  background-color: #333;
+  background-color: #D7A2AF;
   color: #eee;
   transition: all 0.3s;
 }
@@ -646,7 +633,7 @@ html, body {
   height: 2.6rem;
   background-color: rgba(0, 0, 0, 0.1);
   border-radius: 0.6rem;
-  border: 0.2rem solid #333;
+  border: 0.2rem solid #D7A2AF;
   font-size: 1rem;
   transition: all 0.3s;
 }
@@ -677,7 +664,7 @@ html, body {
   .formularioBotones input {
     width: 6rem;
     height: 2rem;
-    border: 2px solid #333;
+    border: 2px solid #D7A2AF;
     font-size: 1rem;
   }
 }
@@ -702,12 +689,15 @@ html, body {
 .pie {
   grid-column: 1/5;
   grid-row: 5/6;
-  background-color: #333;
+  background-image: url(../img/footer.svg);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
   color: #eee;
   font-size: 1.4rem;
   text-align: center;
   width: 100vw;
-  height: auto;
+  height: 300px;
   display: flex;
   flex-flow: column;
   padding-top: 20px;
@@ -716,12 +706,15 @@ html, body {
 .pieAlt {
   grid-column: 1/5;
   grid-row: 4/5;
-  background-color: #333;
+  background-image: url(../img/footer.svg);
+  background-repeat: none;
+  background-position: center;
+  background-size: cover;
   color: #eee;
   font-size: 1.4rem;
   text-align: center;
   width: 100vw;
-  height: auto;
+  height: 300px;
   display: flex;
   flex-flow: column;
   padding-top: 20px;
@@ -729,6 +722,7 @@ html, body {
 
 .pieRedes {
   width: 100%;
+  margin-top: 8rem;
 }
 .pieRedes a {
   color: #eee;
@@ -736,7 +730,7 @@ html, body {
   transition: all 0.2s;
 }
 .pieRedes a:hover {
-  color: #D7A2AF;
+  color: #111;
   font-size: 2.5em;
   transition: all 0.2s;
 }
