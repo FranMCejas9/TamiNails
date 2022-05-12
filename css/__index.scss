@@ -96,7 +96,7 @@
 .servicios{
     grid-column: 1/5;
     grid-row: 3/4;
-    background-color: rgba(255, 255, 255, 0.4);
+    background-color: rgba($color: $gris, $alpha: 0.1);
     padding-top: 3rem;
     width: 100vw;
     height: auto;
@@ -107,6 +107,10 @@
 }
 .serviciosCard{
     width: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     min-width: 200px;
     height: 20rem;
     min-height: 200px;
@@ -117,7 +121,7 @@
     height: auto;
     min-width: 200px;
     border-radius: 50%;
-    box-shadow: 0px 0px 1rem rgba(0, 0, 0, 0.2);
+    box-shadow: 0px 0px 1rem rgba($color: $negro, $alpha: 0.2);
     transition: all 0.5s;
     &:hover{
         transform: scale(1.1); 
@@ -125,26 +129,25 @@
     }
 }
 
-.img1{
-    border: 0.5rem solid #fabfb757;
-}
-.img2{
-    border: 0.5rem solid #57423f56;
-}
-.img3{
-    border: 0.5rem solid #b9cef863;
-}
-.img4{
-    border: 0.5rem solid #bfa6a277;
-}
-.img5{
-    border: 0.5rem solid #8297c04f;
-}
+$mapaImg: (
+    1: #fabfb757,
+    2: #57423f56,
+    3: #b9cef863,
+    4: #bfa6a277,
+    5: #8297c04f
+);
 
+@each $posicion,$colores in $mapaImg{
+    .img#{$posicion} {
+        border: 0.5rem solid $colores;
+    }
+}
 .serviciosCardSub{
+    @include textos($subSize,center,uppercase);
     color: $gris;
-    font-size: max(min(1.2rem), 2vw);
-    text-align: center;
+    border-top:4px solid;
+    border-radius: 0.4rem;
+    margin-top: 0.3rem;
 }
 
 .consejos{
@@ -156,9 +159,6 @@
     padding:1rem;
 }
 
-.uñas{
-    border-radius: 0.4rem;
-}
 .consejosContenido{
     text-align: center;
     border-radius: 0.5rem;
@@ -166,20 +166,41 @@
 .consejosSub{
     text-align: center;
     width: 100%;
-    color: $rosa;
+    color: $rosa2;
+    font-style: italic;
     font-size: $subSize;
     max-height: 50px;
     border-radius: 0.5rem;
+    padding: 4px;
 }
 .consejosImg{
-    background-color: $blanco;
-    width: 20rem;
-    min-width: 300px;
-    height: 20rem;
-    min-height: 300px;
-    border-radius: 100%;
+    background-color: $rosa2;
+    width: 16rem;
+    min-width: 250px;
+    height: 18rem;
+    min-height: 250px;
+    border-radius: 50% / 65% 65% 40% 40%;
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     margin-bottom: 2rem;
+    margin-top: 2rem;
+}
+
+$acordion: (
+    16px: pink,
+    17px: yellow,
+    18px: brown,
+    19px: grey,
+    20px: orange,
+    21px: skyblue,
+    22px: green,
+);
+
+@each $size,$colores1 in $acordion{
+    .texto-#{$colores1} {
+        background-color: $colores1;
+        font-size: $size;
+        text-align: center;
+    }
 }
 
 /* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/

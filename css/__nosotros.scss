@@ -36,46 +36,44 @@
 .nosotrosInfo{
     padding: 2rem;
     img{
-        background-color: $blanco;
-        width: 20rem;
-        min-width: 300px;
-        height: 20rem;
-        min-height: 250px;
-        border-radius: 100%;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-        margin-bottom: 2rem;
+        @extend .consejosImg;
     }
 }
 
 .infoTextos{
-    background-color: rgba(255, 255, 255, 0.4);
-    border-radius: 1.3rem;
+    display: flex;
+    justify-content: center;
+    background-color: rgba($color: $rosa2, $alpha: 0.8);
+    border-radius: 1rem;
     h2{
-        @extend .consejosSub
+        @extend .consejosSub;
+        color: $blanco;
+    }
+    p{
+        @include textos($pSize,center,cursive);
+        color: $blanco;
     }
 }
 
 .nosotrosUbi{
     margin-top: 1rem;
     padding: 2rem;
+}
+.ubiContenido{
+    background-color: rgba($color: $rosa2, $alpha: 0.8);
+    border-radius: 1rem;
     iframe{
         margin-top: 1rem;
         width: 100%;
     }
     h2{
-        @extend .consejosSub
+        @extend .consejosSub;
+        color: $blanco;
     }
 }
-
 .ubiImg {
     img{
-    background-color: $blanco;
-    width: 20rem;
-    min-width: 300px;
-    height: 20rem;
-    min-height: 250px;
-    border-radius: 100%;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    @extend .consejosImg;
     }
 }
 /* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/

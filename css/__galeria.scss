@@ -25,38 +25,27 @@
         color: $rosa;
     }
 }
-.galeria{  
+.galeria{
     padding: 5%;
     grid-column: 1/5;
     grid-row: 3/4;
+    h1{
+        font-size:$subSize;
+        text-align: center;
+        color: $rosa2;
+        font-style: italic;
+    }
+}
+.galeriaFotos{  
     display: grid;
     grid-auto-rows: minmax(min(250px, 25rem),1fr);
     grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem),1fr));
 }
 
-.ilustracion{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    img{
-        background-color: $blanco;
-        width: 70%;
-        height: 70%;
-        border-radius: 100%;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    }
-}
-.ilustracionTitulo{
-    @extend .consejosSub;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1rem 0px 1rem 0px;
-}
+
 .imagenes{
     padding: 2rem;
-    border-radius: 4rem;
+    border-radius: 3rem;
     width: 100%;
     height: 100%;
 }

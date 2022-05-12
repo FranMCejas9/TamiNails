@@ -25,7 +25,6 @@
     grid-row: 3/4;
     width: 100vw;
     height: auto;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 .serviciosImg{
     width: 350px;
@@ -34,15 +33,11 @@
     text-align: center;
     h2{  
         @extend .consejosSub;
+        max-height: 80px;
     }
     img{
-        background-color: $blanco;
-        width: 300px;
-        height: 300px;
-        border-radius: 100%;
-        padding: 1rem;
-        margin: 2rem 0px 2rem 0px;
-        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+        @extend .consejosImg;
+        min-width: 200px;
     }
 }
 
@@ -84,13 +79,12 @@
 }
 
 .flip-card-front {
-    background-color: #bbb;
     color: $negro;
 }
 
 
 .flip-card-back {
-    background-color: $gris;
+    background-color: $rosa2;
     color: $blanco;
     transform: rotateY(180deg);
     display: flex;
@@ -107,15 +101,7 @@
         .serviciosHeroTextos{
             width: 50%;
         }
-        .serviciosImg{
-            margin: 2rem;
-            img{
-                width: 300px;
-                height: 300px;
-            }
-        }
     }
-
     /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
 
 @media screen and (max-width:600px){
@@ -127,17 +113,6 @@
         width: 70%;
     }
 }
-
-/* /////////////////////////////////////////////////////////420px///////////////////////////////////////////////////////*/
-@media screen and (max-width:420px) {
-        img {
-            width: 250px;
-            height: 250px;
-            margin-left: 10%;
-        }
-    }
-
-
 /* /////////////////////////////////////////////////////////370px///////////////////////////////////////////////////////*/
 
 @media screen and (max-width:370px) {

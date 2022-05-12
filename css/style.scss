@@ -11,16 +11,31 @@
 
 /* Colores */
 $rosa:#D7A2AF;
+$rosa2:#e7c5cd;
 $blanco:#eee;
-$gris:#D7A2AF;
+$gris:#333;
+$gris2:#777;
 $negro:#111;
 /* Medidas */
 $titleSize:max(min(2rem), 5vw);
-$subSize:max(min(16px,1.4rem), 2vw);
+$subSize: max(min(1.4rem), 3vw);
 $pSize:max(min(1.2rem), 2vw);
+/* fuentes */
+$font:Verdana;
+/* mixin */
+@mixin textos($sizes,$align,$family){
+    font-size: $sizes;
+    text-align: $align;
+    font-family: $family;
+}
 /* /////////////////////////////////////////////////////////CONTENEDORES///////////////////////////////////////////////////////*/
 html, body {
     max-width: 100%;
+    background-image: url(../img/fondo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: local;
     overflow-x: hidden;
 } 
 .contenedor{
@@ -42,7 +57,18 @@ html, body {
 .navbar{
     grid-column: 1/5;
     grid-row: 1/2;
-    background-color: $gris;
+    background-color: $rosa;
+    border-bottom:1px solid $blanco;
+}
+
+
+.nav-link{
+    transition: all 0.3s;
+    &:hover{
+        background-color: $rosa2;
+        border-radius: 0.6rem;
+        transition: all 0.3s;
+    }
 }
 
 .headerLogo{
@@ -51,6 +77,7 @@ html, body {
     height: 4rem;
     background-color: $blanco;
     border-radius: 50%;
+    box-shadow:0px 0px 2rems rgba($color: $gris, $alpha: 0.1)
 }
 
 /* /////////////////////////////////////////////////////////HEADER///////////////////////////////////////////////////////*/
@@ -76,6 +103,7 @@ html, body {
 /* /////////////////////////////////////////////////////////FOOTERS///////////////////////////////////////////////////////*/
 
 .pie{
+    @include textos(1.4rem,center,$font);
     grid-column: 1/5;
     grid-row: 5/6;
     background-image: url(../img/footer.svg);
@@ -83,16 +111,20 @@ html, body {
     background-position: center;
     background-size: cover;
     color: $blanco;
-    font-size: 1.4rem;
     text-align: center;
     width: 100vw;
     height: 300px;
     display: flex;
     flex-flow: column;
-    padding-top: 20px;
+    justify-content: end;
+    padding-bottom: 2%;
+    p{
+        @include textos(1.4rem,center,$font);
+    }
 }
 
 .pieAlt{
+    @include textos(1.4rem,center,$font);
     grid-column: 1/5;
     grid-row: 4/5;
     background-image: url(../img/footer.svg);
@@ -100,24 +132,25 @@ html, body {
     background-position: center;
     background-size: cover;
     color: $blanco;
-    font-size: 1.4rem;
-    text-align: center;
     width: 100vw;
     height: 300px;
     display: flex;
     flex-flow: column;
-    padding-top: 20px;
+    justify-content: end;
+    padding-bottom: 2%;
+    p{
+        @include textos(1.4rem,center,$font);
+    }
 }
 
 .pieRedes{
     width: 100%;
-    margin-top: 8rem;
     a{
         color: $blanco;
         font-size: 2.4em;
         transition: all 0.2s;
         &:hover{
-            color: $negro;
+            color: $gris2;
             font-size: 2.5em;
             transition: all 0.2s;
         }
@@ -153,4 +186,11 @@ html, body {
 }
 
 }
+/* /////////////////////////////////////////////////////////992px///////////////////////////////////////////////////////*/
 
+@media screen and (max-width:992px){
+    
+.headerLogo{
+    margin-left: 50%;
+}
+}
