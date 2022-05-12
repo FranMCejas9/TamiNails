@@ -1,0 +1,2 @@
+Agregué etiquetas keywords,description, author a todas las paginas.
+Cambié el titulo a todas las paginas de la web.
