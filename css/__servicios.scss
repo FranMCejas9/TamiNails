@@ -34,11 +34,23 @@
     h2{  
         @extend .consejosSub;
         max-height: 80px;
+        margin-bottom: 1rem;
     }
-    img{
-        @extend .consejosImg;
-        min-width: 200px;
+    div{
+        background-image: url(../img/fondo-img2.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        min-width: 300px;
+        padding: 0.5rem;
+        display: flex;
+        justify-content: center;
+        img{
+            width: 100%;
+            min-width: 200px;
+        }
     }
+    
 }
 
 .flip-card {
@@ -91,6 +103,9 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
+    h1{
+        font-size: $pSize;
+    }
 }
 
 /* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
@@ -119,5 +134,10 @@
         .flip-card{
             width: 250px;
             height: 250px;
+        }
+        .flip-card-back{
+            p{
+                font-size: 0.86rem;
+            }
         }
     }

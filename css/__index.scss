@@ -11,6 +11,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    border-bottom:1px solid $blanco;
 }
 .heroContenido{
     width: 100%;
@@ -54,13 +55,13 @@
         text-decoration: none;
         font-size: max(min(1rem), 1.6vw); 
         padding: 0.3em;
-        background-color: rgba(255, 255, 255, 0.2);
-        border: 0.2rem solid rgba(255, 255, 255, 0.2);
+        background-color: $gris;
+        border: 0.2rem solid $blanco;
         transition: all 0.3s;
         &:hover {
             color: $blanco;
             background-color: $negro;
-            background-color: $negro;
+            border-color: $gris;
             transition: all 0.3s;
         }
     }
@@ -104,6 +105,7 @@
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    border-bottom:1px solid $blanco;
 }
 .serviciosCard{
     width: 18%;
@@ -111,15 +113,14 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    min-width: 200px;
-    height: 20rem;
+    min-width: 250px;
     min-height: 200px;
 }
 
 .serviciosCardImg{
     width: 30%;
     height: auto;
-    min-width: 200px;
+    min-width: 250px;
     border-radius: 50%;
     box-shadow: 0px 0px 1rem rgba($color: $negro, $alpha: 0.2);
     transition: all 0.5s;
@@ -143,9 +144,8 @@ $mapaImg: (
     }
 }
 .serviciosCardSub{
-    @include textos($subSize,center,uppercase);
-    color: $gris;
-    border-top:4px solid;
+    @include textos($pSize,center,uppercase);
+    color: $negro;
     border-radius: 0.4rem;
     margin-top: 0.3rem;
 }
@@ -166,7 +166,7 @@ $mapaImg: (
 .consejosSub{
     text-align: center;
     width: 100%;
-    color: $rosa2;
+    color: $gris;
     font-style: italic;
     font-size: $subSize;
     max-height: 50px;
@@ -174,34 +174,30 @@ $mapaImg: (
     padding: 4px;
 }
 .consejosImg{
-    background-color: $rosa2;
-    width: 16rem;
-    min-width: 250px;
-    height: 18rem;
-    min-height: 250px;
-    border-radius: 50% / 65% 65% 40% 40%;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
-    margin-bottom: 2rem;
-    margin-top: 2rem;
-}
-
-$acordion: (
-    16px: pink,
-    17px: yellow,
-    18px: brown,
-    19px: grey,
-    20px: orange,
-    21px: skyblue,
-    22px: green,
-);
-
-@each $size,$colores1 in $acordion{
-    .texto-#{$colores1} {
-        background-color: $colores1;
-        font-size: $size;
-        text-align: center;
+    background-image: url(../img/fondo-img.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    min-width: 400px;
+    img{
+        width: 16rem;
+        min-width: 250px;
+        height: 18rem;
+        min-height: 250px;
+        margin-bottom: 2rem;
+        margin-top: 2rem;
     }
 }
+.accordion{
+    background-color: $rosa2;
+    border-radius: 0.4rem;
+    padding: 1rem;
+    .acordionTexto{
+        color: $rosa;
+        font-size: $p2Size;
+    }
+}
+
 
 /* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/
 

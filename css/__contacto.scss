@@ -36,10 +36,14 @@
     @extend .consejosSub;
 }
 .contactoImg{
-    @extend .consejosImg;
-    width: 350px;
-    height: 350px;
-    margin-bottom: 1rem;
+    background-image:url(../img/fondo-img3.svg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    img{
+        width: 400px;
+        height: 400px;
+    }
 }
 .contactoFormulario{
     width: 100%;
@@ -110,6 +114,9 @@
     .contactoFormulario{
             margin-top: 3rem;
         }
+    .contactoImg{
+        display: none;
+    }
     }    
 
     
@@ -117,9 +124,6 @@
 
 @media screen and (max-width:600px){
 
-    .contactoHeroTextos{
-        width: 70%;
-    }
     
     .contactoFormulario{
         padding: 0.3rem;

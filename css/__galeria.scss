@@ -30,9 +30,10 @@
     grid-column: 1/5;
     grid-row: 3/4;
     h1{
+        padding: 0.3rem;
         font-size:$subSize;
         text-align: center;
-        color: $rosa2;
+        color: $gris;
         font-style: italic;
     }
 }

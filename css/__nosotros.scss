@@ -35,19 +35,26 @@
 
 .nosotrosInfo{
     padding: 2rem;
-    img{
-        @extend .consejosImg;
+    div:first-child{
+        display: flex;
+        justify-content: center;
+        img{
+            transform: rotateY(180deg);
+            margin-bottom: 1rem;
+            width: 400px;
+            min-width: 300px;
+        }
     }
 }
 
 .infoTextos{
     display: flex;
     justify-content: center;
-    background-color: rgba($color: $rosa2, $alpha: 0.8);
+    background-color: $rosa2;
     border-radius: 1rem;
     h2{
         @extend .consejosSub;
-        color: $blanco;
+        color: $gris;
     }
     p{
         @include textos($pSize,center,cursive);
@@ -60,7 +67,7 @@
     padding: 2rem;
 }
 .ubiContenido{
-    background-color: rgba($color: $rosa2, $alpha: 0.8);
+    background-color: $rosa2;
     border-radius: 1rem;
     iframe{
         margin-top: 1rem;
@@ -68,16 +75,31 @@
     }
     h2{
         @extend .consejosSub;
-        color: $blanco;
+        color: $gris;
     }
 }
 .ubiImg {
+    background-image: url(../img/fondo-img.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
     img{
-    @extend .consejosImg;
+        width: 400px;
+        min-width: 300px;
     }
 }
+
 /* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/
 
+/* /////////////////////////////////////////////////////////992px///////////////////////////////////////////////////////*/
+
+@media screen and (max-width:992px){
+    .ubiImg{
+        img{
+            display: none;
+        }
+    }
+}
 /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
 
 @media screen and (max-width:600px){
@@ -91,7 +113,7 @@
 @media screen and (max-width:420px) {
     .ubiContenido {
         iframe{
-            height: 400px;
+            height: 300px;
         }
     }
 }

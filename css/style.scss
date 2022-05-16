@@ -20,6 +20,7 @@ $negro:#111;
 $titleSize:max(min(2rem), 5vw);
 $subSize: max(min(1.4rem), 3vw);
 $pSize:max(min(1.2rem), 2vw);
+$p2Size:max(min(1rem), 1.4vw);
 /* fuentes */
 $font:Verdana;
 /* mixin */
@@ -108,7 +109,7 @@ html, body {
     grid-row: 5/6;
     background-image: url(../img/footer.svg);
     background-repeat: none;
-    background-position: center;
+    background-position: initial;
     background-size: cover;
     color: $blanco;
     text-align: center;
@@ -118,8 +119,10 @@ html, body {
     flex-flow: column;
     justify-content: end;
     padding-bottom: 2%;
+    text-align: start;
     p{
-        @include textos(1.4rem,center,$font);
+        padding-left: 5%;
+        font-size: $p2Size;
     }
 }
 
@@ -129,7 +132,7 @@ html, body {
     grid-row: 4/5;
     background-image: url(../img/footer.svg);
     background-repeat: none;
-    background-position: center;
+    background-position: initial;
     background-size: cover;
     color: $blanco;
     width: 100vw;
@@ -138,21 +141,39 @@ html, body {
     flex-flow: column;
     justify-content: end;
     padding-bottom: 2%;
+    text-align: start;
     p{
-        @include textos(1.4rem,center,$font);
+            padding-left: 5%;
+        font-size: $p2Size;
     }
 }
 
 .pieRedes{
     width: 100%;
-    a{
-        color: $blanco;
-        font-size: 2.4em;
-        transition: all 0.2s;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 7%;
+    div{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 70px;
+        height: 70px;
+        border-radius: 0.5rem;
+        margin: 0.6rem;
+        transition: all 0.4s;
         &:hover{
-            color: $gris2;
-            font-size: 2.5em;
-            transition: all 0.2s;
+            transform: scale(1.1);
+            background-color: $blanco;
+            transition: all 0.4s;
+            a{
+                font-size: 2.5em;
+                color: $rosa;
+            }
+        }
+        a{
+            color: $blanco;
+            font-size: 2.4em;
         }
     }
     
@@ -178,11 +199,12 @@ html, body {
 /* /////////////////////////////////////////////////////////FOOTERS///////////////////////////////////////////////////////*/
 
 .pie{
-    font-size: 1rem;
+    font-size: 1.2rem;
+
 }
 
 .pieAlt{
-    font-size: 1rem;
+    font-size: 1.2rem;
 }
 
 }
@@ -193,4 +215,14 @@ html, body {
 .headerLogo{
     margin-left: 50%;
 }
+}
+
+/* /////////////////////////////////////////////////////////420px///////////////////////////////////////////////////////*/
+@media screen and (max-width:420px) {
+    .pie{
+        padding-bottom: 2rem;
+    }
+    .pieAlt{
+        padding-bottom: 2rem;
+    }
 }
