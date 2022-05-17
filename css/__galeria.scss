@@ -40,7 +40,7 @@
 .galeriaFotos{  
     display: grid;
     grid-auto-rows: minmax(min(250px, 25rem),1fr);
-    grid-template-columns: repeat(auto-fill, minmax(min(100%, 25rem),1fr));
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem),1fr));
 }
 
 
@@ -48,6 +48,7 @@
     padding: 2rem;
     border-radius: 3rem;
     width: 100%;
+    min-width: 300px;
     height: 100%;
 }
 
