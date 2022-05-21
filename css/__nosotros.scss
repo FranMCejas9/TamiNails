@@ -10,6 +10,7 @@
     flex-flow: column nowrap;
     align-items: flex-end;
     justify-content: center;
+    border-bottom: 2px solid #fff;
 }
 .nosotrosHeroTextos{
     width: 100%;
@@ -31,61 +32,64 @@
     grid-row: 3/4;
     width: 100vw;
     height: auto;
+    .nosotrosCont{
+        display: flex;
+        justify-content: center;
+        padding: 3rem;
+    }
 }
 
 .nosotrosInfo{
-    padding: 2rem;
-    div:first-child{
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 1rem;
+    border-radius: 0.5rem;
+    img{
+        transform: rotateY(180deg);
+        margin-bottom: 1rem;
+        width: auto;
+        max-width: 400px;
+    }
+    
+    .infoTextos{
         display: flex;
         justify-content: center;
-        img{
-            transform: rotateY(180deg);
-            margin-bottom: 1rem;
-            width: 400px;
-            min-width: 300px;
+        h2{
+            @extend .consejosSub; 
+            color: $rosa;
+        }
+        p{
+            @include textos($pSize,center,capitalize);
+            color: $blanco;
         }
     }
 }
 
-.infoTextos{
-    display: flex;
-    justify-content: center;
-    background-color: $rosa2;
-    border-radius: 1rem;
-    h2{
-        @extend .consejosSub;
-        color: $gris;
-    }
-    p{
-        @include textos($pSize,center,cursive);
-        color: $blanco;
-    }
-}
 
 .nosotrosUbi{
-    margin-top: 1rem;
+    background-color: rgba(0, 0, 0, 0.6);
+    margin-top: 2rem;
     padding: 2rem;
-}
-.ubiContenido{
-    background-color: $rosa2;
-    border-radius: 1rem;
-    iframe{
-        margin-top: 1rem;
-        width: 100%;
+    border-radius: 0.5rem;
+    .ubiContenido{
+        background-color: $rosa;
+        border-radius: 0.5rem;
+        iframe{
+            margin-top: 1rem;
+            width: 100%;
+        }
+        h2{
+            @extend .consejosSub; 
+        }
     }
-    h2{
-        @extend .consejosSub;
-        color: $gris;
-    }
-}
-.ubiImg {
-    background-image: url(../img/fondo-img.svg);
-    background-position: center;
-    background-size: contain;
-    background-repeat: no-repeat;
-    img{
-        width: 400px;
-        min-width: 300px;
+    .ubiImg {
+        background-image: url(../img/fondo-img.svg);
+        background-position: center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        img{
+            width: 400px;
+            min-width: 300px;
+        }
     }
 }
 
@@ -105,6 +109,17 @@
 @media screen and (max-width:600px){
     .nosotrosHero{
         height: 80vh;
+    }
+    .nosotros{
+        .nosotrosCont{
+            padding: 1rem;
+        }
+    }
+    .nosotrosInfo{
+        padding: 0.4rem;
+    }
+    .nosotrosUbi{
+        padding: 0.4rem;
     }
 }
 

@@ -10,6 +10,7 @@
     flex-flow: column nowrap;
     align-items: flex-end;
     justify-content: center;
+    border-bottom: 2px solid #fff;
 }
 .serviciosHeroTextos{
     @extend .galeriaHeroTextos;
@@ -20,21 +21,26 @@
     
 }
 .serviciosPag{
-    padding-top: 5%;
     grid-column: 1/5;
     grid-row: 3/4;
     width: 100vw;
     height: auto;
 }
 .serviciosImg{
+    background-color: $blanco;
     width: 350px;
     height: 350px;
-    border-radius: 0.3rem;
+    margin: 2rem;
+    padding: 0.4rem;
+    border-radius: 1rem;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
     h2{  
         @extend .consejosSub;
-        max-height: 80px;
-        margin-bottom: 1rem;
+        color: $gris;
     }
     div{
         background-image: url(../img/fondo-img2.svg);
@@ -54,14 +60,38 @@
 }
 
 .flip-card {
-    background-color: transparent;
-    width: 350px;
-    height: 350px;
+    aspect-ratio: 1/1;
+    background-color: $blanco;
+    padding: 0.4rem;
+    max-width: 350px;
+    max-height: 350px;
     margin: 2rem;
     perspective: 1000px;
     border-radius: 1rem;
+    animation-delay: initial;
+    animation-duration: 1.4s;
+    animation-iteration-count: infinite;
+    animation-name: card;
     &:hover .flip-card-inner {
         transform: rotateY(180deg);
+    }
+}
+
+@keyframes card {
+    0%{
+        box-shadow: 0px 0px 0.3rem #aaa;
+    }
+    25%{
+        box-shadow: 0px 0px 0.5rem #aaa;
+    }
+    50%{
+        box-shadow: 0px 0px 0.8rem #aaa;
+    }
+    75%{
+        box-shadow: 0px 0px 0.5rem #aaa;
+    }
+    100%{
+        box-shadow: 0px 0px 0.3rem #aaa;
     }
 }
 
@@ -96,18 +126,38 @@
 
 
 .flip-card-back {
-    background-color: $rosa2;
+    background-color: $gris;
+    padding: 0.1rem;
     color: $blanco;
     transform: rotateY(180deg);
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
     text-align: center;
     h1{
         font-size: $subSize;
-        color: $gris;
+        color: $rosa;
         font-style: italic;
     }
+    a{
+        width: 30%;
+        input{
+            padding: 0.3rem;
+            background-color: $gris2;
+            color: $blanco;
+            border: none;
+            border-radius: 0.3rem;
+            transition: all 0.3s;
+            font-family: $font;
+            &:hover{
+                transition: all 0.3s;
+                background-color: $blanco;
+                color:$gris2;
+            }
+        }
+    }
+    
 }
 
 /* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
@@ -119,6 +169,7 @@
             width: 50%;
         }
     }
+
     /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
 
 @media screen and (max-width:600px){
@@ -130,11 +181,3 @@
         width: 70%;
     }
 }
-/* /////////////////////////////////////////////////////////370px///////////////////////////////////////////////////////*/
-
-@media screen and (max-width:370px) {
-        .flip-card{
-            width: 300px;
-            height: 300px;
-        }
-    }
