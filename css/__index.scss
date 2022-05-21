@@ -154,8 +154,8 @@ $mapaImg: (
     grid-row: 4/5;
     width: 100vw;
     height: auto;
-    min-height: 200px;
-    background-image: url(/img/indexRedes.jpg);
+    min-height: 300px;
+    background-image: url(../img/indexRedes.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
@@ -169,7 +169,7 @@ $mapaImg: (
         h3{
             color: $blanco;
             text-align: center;
-            font-size: $sub2Size;
+            font-size: $subSize;
         }
     }
     .redesSociales{
@@ -193,7 +193,7 @@ $mapaImg: (
             }
             a{
                 color: $rosa;
-                font-size: $sub2Size;
+                font-size: $subSize;
             }
         }
     }
@@ -257,15 +257,12 @@ $mapaImg: (
 /* /////////////////////////////////////////////////////////768px///////////////////////////////////////////////////////*/
 @media screen and (max-width:768px) {
     .indexRedes{
+        height: 50vh;
         .indexRedesTitulo{
             width: 100%;
         }
         .redesSociales{
             width: 100%;
-            div{
-                width: 60px;
-                height: 60px;
-            }
         }
     }
 }

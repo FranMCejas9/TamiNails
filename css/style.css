@@ -231,8 +231,8 @@ html, body {
   grid-row: 4/5;
   width: 100vw;
   height: auto;
-  min-height: 200px;
-  background-image: url(/img/indexRedes.jpg);
+  min-height: 300px;
+  background-image: url(../img/indexRedes.jpg);
   background-size: cover;
   background-position: center;
   display: flex;
@@ -248,7 +248,7 @@ html, body {
 .indexRedes .indexRedesTitulo h3 {
   color: #eee;
   text-align: center;
-  font-size: max(1.5rem, 3vw);
+  font-size: max(1.8rem, 3vw);
 }
 .indexRedes .redesSociales {
   width: 60%;
@@ -273,7 +273,7 @@ html, body {
 }
 .indexRedes .redesSociales div a {
   color: #D7A2AF;
-  font-size: max(1.5rem, 3vw);
+  font-size: max(1.8rem, 3vw);
 }
 
 .consejos {
@@ -334,15 +334,14 @@ html, body {
 /* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/
 /* /////////////////////////////////////////////////////////768px///////////////////////////////////////////////////////*/
 @media screen and (max-width: 768px) {
+  .indexRedes {
+    height: 50vh;
+  }
   .indexRedes .indexRedesTitulo {
     width: 100%;
   }
   .indexRedes .redesSociales {
     width: 100%;
-  }
-  .indexRedes .redesSociales div {
-    width: 60px;
-    height: 60px;
   }
 }
 /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
