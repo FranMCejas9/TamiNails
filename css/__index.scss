@@ -149,10 +149,58 @@ $mapaImg: (
     border-radius: 0.4rem;
     margin-top: 0.3rem;
 }
-
-.consejos{
+.indexRedes{
     grid-column: 1/5;
     grid-row: 4/5;
+    width: 100vw;
+    height: auto;
+    min-height: 200px;
+    background-image: url(/img/indexRedes.jpg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-wrap: wrap;
+    .indexRedesTitulo{
+        background-color: rgba($color: $gris, $alpha: 0.8);
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        h3{
+            color: $blanco;
+            text-align: center;
+            font-size: $sub2Size;
+        }
+    }
+    .redesSociales{
+        width: 60%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        background-color: rgba($color: $gris, $alpha: 0.8);
+        div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%;
+            background-color: $blanco;
+            width: 70px;
+            height: 70px;
+            transition: all 0.4s;
+            &:hover{
+                box-shadow: 0px 0px 0.4rem $blanco;
+                transition: all 0.4s;
+            }
+            a{
+                color: $rosa;
+                font-size: $sub2Size;
+            }
+        }
+    }
+}
+.consejos{
+    grid-column: 1/5;
+    grid-row: 5/6;
     width: 100vw;
     height: auto;
     margin: 0px;
@@ -206,7 +254,21 @@ $mapaImg: (
 
 
 /* /////////////////////////////////////////////////////////Media Query///////////////////////////////////////////////////////*/
-
+/* /////////////////////////////////////////////////////////768px///////////////////////////////////////////////////////*/
+@media screen and (max-width:768px) {
+    .indexRedes{
+        .indexRedesTitulo{
+            width: 100%;
+        }
+        .redesSociales{
+            width: 100%;
+            div{
+                width: 60px;
+                height: 60px;
+            }
+        }
+    }
+}
 /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
 
 @media screen and (max-width:600px){
