@@ -144,16 +144,18 @@
         width: 30%;
         input{
             padding: 0.3rem;
-            background-color: $gris2;
+            background-color: $rosa;
             color: $blanco;
             border: none;
-            border-radius: 0.3rem;
+            border-radius: 0.4rem;
             transition: all 0.3s;
             font-family: $font;
+            border-bottom: 0.25rem solid $blanco;
             &:hover{
                 transition: all 0.3s;
                 background-color: $blanco;
                 color:$gris2;
+                border-color: $rosa;
             }
         }
     }

@@ -31,19 +31,14 @@ $font:Verdana;
     font-family: $family;
 }
 /* /////////////////////////////////////////////////////////CONTENEDORES///////////////////////////////////////////////////////*/
-html, body {
-    max-width: 100%;
-    background-image: url(../img/fondo.svg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    background-attachment: local;
+body{
     overflow-x: hidden;
-} 
-.contenedor{
+}
+
+
+.indexContainer{
     width: 100vw;
     height: 100vh;
-    display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: auto 1fr 1fr 1fr 1fr 1fr;
 }
@@ -122,7 +117,7 @@ html, body {
     padding-bottom: 2%;
     text-align: start;
     p{
-        padding-left: 5%;
+        padding-left: 3%;
         font-size: $p2Size;
     }
 }
@@ -168,13 +163,13 @@ html, body {
             background-color: $blanco;
             transition: all 0.4s;
             a{
-                font-size: 1.6em;
+                font-size: 2.1rem;
                 color: $rosa;
             }
         }
         a{
             color: $blanco;
-            font-size: 1.5em;
+            font-size: 2rem;
         }
     }
     
@@ -226,4 +221,24 @@ html, body {
     .pieAlt{
         padding-bottom: 2rem;
     }
+    .pieRedes{
+        div{
+            &:hover{
+                a{
+                    font-size: 2.7rem;
+                }
+            }
+            a{
+                font-size: 2.5rem;
+            }
+        }
+    }
+    
+    .pieWhatsapp{
+        width: 2.4rem;
+        height: 2.4rem;
+        img{
+            width: 100%;
+        }
+}
 }
