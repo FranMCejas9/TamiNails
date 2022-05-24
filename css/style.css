@@ -299,7 +299,7 @@ body {
   border-radius: 0.5rem;
 }
 
-.consejosSub, .formularioTitulo, .contactoTitulo, .nosotrosUbi .ubiContenido h2, .nosotrosInfo .infoTextos h2, .serviciosImg h2 {
+.consejosSub, .formularioTitulo, .contactoUbi .ubiTitulo, .nosotrosUbi .ubiContenido h2, .nosotrosInfo .infoTextos h2, .serviciosImg h2 {
   text-align: center;
   width: 100%;
   color: #333;
@@ -766,39 +766,75 @@ body {
   grid-row: 3/4;
   width: 100vw;
   height: auto;
-  margin-top: 1rem;
   padding: 2rem;
 }
 
-.contactoContenido {
+.contactoUbi {
+  box-shadow: 0px 0px 3rem rgba(51, 51, 51, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  background-color: #333;
+  border-radius: 2rem;
+}
+.contactoUbi .ubiTitulo {
+  color: #eee;
+}
+.contactoUbi .ubiMap {
+  width: 100%;
+}
+.contactoUbi .ubiMap iframe {
+  width: 100%;
 }
 
-.contactoImg {
-  background-image: url(../img/fondo-img3.svg);
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
+.formulario {
+  box-shadow: 0px 0px 3rem rgba(51, 51, 51, 0.2);
+  display: flex;
+  height: auto;
 }
-.contactoImg img {
-  width: 400px;
-  height: 400px;
+.formulario .formularioImg {
+  background-image: url(../img/formulario.svg);
+  background-size: contain;
+  width: 20%;
+  border-radius: 2rem 0px 0px 2rem;
+}
+.formulario .formularioImg .formularioRedes {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.formulario .formularioImg .formularioRedes div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #333;
+  width: 60px;
+  height: 60px;
+  transition: all 0.4s;
+}
+.formulario .formularioImg .formularioRedes div:hover {
+  box-shadow: 0px 0px 0.4rem #eee;
+  transition: all 0.4s;
+}
+.formulario .formularioImg .formularioRedes div a {
+  color: #eee;
+  font-size: max(1.5rem, 3vw);
 }
 
 .contactoFormulario {
-  width: 100%;
+  background-color: #333;
+  width: 80%;
   padding: 2rem;
-  height: 500px;
   display: flex;
   justify-content: space-around;
   flex-flow: column wrap;
   text-align: center;
-  background-color: #e7c5cd;
-  border-radius: 2rem;
+  border-radius: 0px 2rem 2rem 0px;
   font-family: Verdana;
 }
 .contactoFormulario textarea {
@@ -959,17 +995,17 @@ body {
   font-size: 2rem;
 }
 
-.pieWhatsapp {
-  position: fixed;
-  bottom: 5%;
-  right: 5%;
-  width: 3rem;
-  height: 3rem;
-}
-.pieWhatsapp img {
-  width: 100%;
-}
-
+/* 
+.pieWhatsapp{
+    position: fixed;
+    bottom: 5%;
+    right: 5%;
+    width: 3rem;
+    height: 3rem;
+    img{
+        width: 100%;
+    }
+} */
 /* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
 /* /////////////////////////////////////////////////////////1294px///////////////////////////////////////////////////////*/
 @media screen and (max-width: 1264px) {
