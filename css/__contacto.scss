@@ -23,6 +23,12 @@
     grid-row: 3/4;
     width: 100vw;
     height: auto;
+    margin-top: 5%;
+}
+.contactoForm{
+    margin: 0px;
+    padding: 0px;
+    max-width: 100%;
 }
 .contactoUbi{
     height: 500px;
@@ -184,7 +190,7 @@
 @media screen and (max-width:600px){
     
     .formulario{
-        margin-bottom: 5rem;
+        margin-bottom: 6rem;
         .formularioImg{
             border-radius: 2rem 2rem 0px 0px;
             width: 100%;
@@ -201,7 +207,7 @@
     .contactoFormulario{
         padding: 0.5rem;
         width: 100%;
-        border-radius: 0px;
+        border-radius: 0px 0px 2rem 2rem;
     }
     .formularioBotones{
         input{
@@ -209,9 +215,5 @@
             height: 2rem;
             font-size: 1rem;
         }
-    }
-    .contactoUbi{
-        border-top: 0.3rem solid $blanco;
-        border-radius: 0px 0px 2rem 2rem;
     }
 }

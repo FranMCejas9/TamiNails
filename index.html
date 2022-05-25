@@ -31,7 +31,7 @@
     <div class="indexContainer">
         <!--Inicio encabezado-->
         <!--Inicio nav+logo-->
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark" id="navbar">
           <div class="container-fluid">
               <a class="navbar-brand col-8 col-lg-1 d-flex justify-content-center" href="#"><img src="img/logo.png" alt="logo" class="headerLogo"></a>
               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
@@ -106,17 +106,17 @@
         <!-- Redes sociales banner -->
         <section class="indexRedes"  data-aos="fade-up">
           <div class="indexRedesColor">
-            <div class="indexRedesTitulo" data-aos="fade-right">
+            <div class="indexRedesTitulo">
               <h3>Visita nuestras redes!</h3>
             </div>
-            <div class="redesSociales"  data-aos="fade-left">
+            <div class="redesSociales">
               <div class="redesSocialesIcon">
                   <a  href="https://api.whatsapp.com/send?phone=542478476404" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
               </div>
-              <div class="redesSocialesIcon"  data-aos="fade-left">
+              <div class="redesSocialesIcon">
                   <a  href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i><a></a>
               </div>
-              <div class="redesSocialesIcon"  data-aos="fade-left">
+              <div class="redesSocialesIcon">
                   <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></a>
               </div>
             </div>
@@ -124,7 +124,7 @@
         </section>
 
         <!-- Consejos -->
-        <section class="consejos container-fluid"  data-aos="fade-up">
+        <section class="consejos container-fluid">
             <div class="row justify-content-around align-items-center">
                 <div class="consejosContenido row d-flex justify-content-center col-lg-6 col-md-12">
                     <h2 class="col-12 consejosSub">Tips sobre distintos tipos de uñas</h2>
@@ -132,30 +132,28 @@
                       <img src="img/consejos.svg" alt="ilustracion tips">
                     </div>
                 </div>
-                <div class="accordion col-lg-6 col-md-12" id="accordionExample" data-aos="fade-left">
+                <div class="accordion col-lg-6 col-md-12" id="accordionExample"  data-aos="zoom-in">
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingOne">
                         <button class="accordion-button collapsed acordionTittle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                        Uñas acrilicas
+                        Uñas esculpidas
                         </button>
                       </h2>
                       <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body acordionTexto">
-                        Son muy resistentes y evitan que se quiebren. Por lo que son perfectas para las personas con uñas débiles o con tendencia a romperse.
-                        También ayuda al crecimiento de la uña natural.
-                        ¿Cuánto duran las uñas acrílicas? Los acrílicos deberían durar de seis a ocho semanas, dependiendo del cuidado y su mantenimiento; por lo tanto, requerirá un relleno cada dos o tres semanas, dependiendo del crecimiento de las uñas.
+                        Las uñas esculpidas son extenciones que se contruyen a partir de la uña natural con material acrilico o gel. Éstas permiten restaurar y reconstruir uñas mordidas o simplemente lucir las uñas mas largas.
                         </div>
                       </div>
                     </div>
                     <div class="accordion-item">
                       <h2 class="accordion-header" id="headingTwo">
                         <button class="accordion-button collapsed acordionTittle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                        ¿Cuánto duran las uñas acrílicas?
+                        ¿Cuánto duran las uñas esculpidas?
                         </button>
                       </h2>
                       <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                         <div class="accordion-body acordionTexto">
-                          Los acrílicos deberían durar de seis a ocho semanas, dependiendo del cuidado y su mantenimiento; por lo tanto, requerirá un relleno cada dos o tres semanas, dependiendo del crecimiento de las uñas.
+                          Las uñas esculpidas duran entre 15-20 días.
                         </div>
                       </div>
                     </div>
@@ -174,7 +172,7 @@
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFour">
                           <button class="accordion-button collapsed acordionTittle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                            ¿Cuánto dura el espmaltado semipermanente?  
+                            ¿Cuánto dura el esmaltado semipermanente?  
                           </button>
                         </h2>
                         <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
@@ -184,14 +182,27 @@
                         </div>
                       </div>
                       <div class="accordion-item">
+                        <h2 class="accordion-header" id="headingSeven">
+                          <button class="accordion-button collapsed acordionTittle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                            Press on nails
+                          </button>
+                        </h2>
+                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                          <div class="accordion-body acordionTexto">
+                            Las press on nails, son uñas postizas personalizadas a medida de cada clienta.
+                            El kit contiene 10 uñas decoradas o lisas, un palito de naranjo, lima, pegamento e instrucciones para la aplicación.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accordion-item">
                         <h2 class="accordion-header" id="headingFive">
                           <button class="accordion-button collapsed acordionTittle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                            ¿Cómo se quitan las uñas press on? 
+                            ¿Cómo se quitan las uñas press on nails? 
                           </button>
                         </h2>
                         <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                           <div class="accordion-body acordionTexto">
-                            Tanto si las pegas con pegamento líquido para uñas como si las pegas co pestañas adhesivas de doble cara para uñas, sólo necesitarás sumergir tus dedos durante 15 min en un cuenco con agua muy caliente y jabón.
+                            Las press on nails se quitan colocando las manos en un recipiente con agua caliente y un poquito de aceite (bebé,coco,almendra,etc). Dejandolas durante 10 minutos y luego con un palito naranjo las vamos despegando (sin hacer mucha fuerza).
                           </div>
                         </div>
                       </div>
@@ -204,18 +215,6 @@
                         <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
                           <div class="accordion-body acordionTexto">
                             El soft gel es un sistema de extensión del largo de la uña natural, algo similar a las esculpidas. A diferencia de las esculpidas, el soft gel es un sistema express (rapido). No requiere service, este servicio se retira al 100% y se vuelve a realizar desde cero. Duran entre 20-21 días, dependiendo el cuidado que se les dé.
-                          </div>
-                        </div>
-                      </div>
-                      <div class="accordion-item">
-                        <h2 class="accordion-header" id="headingSeven">
-                          <button class="accordion-button collapsed acordionTittle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                            Press on nails
-                          </button>
-                        </h2>
-                        <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
-                          <div class="accordion-body acordionTexto">
-                            ¿Cómo se quitan las uñas press on? Tanto si las pegas con pegamento líquido para uñas como si las pegas co pestañas adhesivas de doble cara para uñas, sólo necesitarás sumergir tus dedos durante 15 min en un cuenco con agua muy caliente y jabón.
                           </div>
                         </div>
                       </div>
@@ -233,6 +232,7 @@
                   <a href="https://www.instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a></a>
                 </div>
             </div>
+            <div class="flechaSubir"><a href="#navbar"><i class="fa-solid fa-arrow-up"></i></a></div>
             <p class="pieCopy">© Copyright 2022 - Franco Cejas</p>
         </footer>
     </div>

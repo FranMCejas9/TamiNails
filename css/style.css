@@ -13,6 +13,7 @@
 /* mixin */
 /* /////////////////////////////////////////////////////////CONTENEDORES///////////////////////////////////////////////////////*/
 body {
+  max-width: 100vw;
   overflow-x: hidden;
 }
 
@@ -145,7 +146,6 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  border-bottom: 0.3rem solid #eee;
 }
 .heroFlecha div a {
   color: #eee;
@@ -247,6 +247,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  height: 100%;
   min-height: 200px;
 }
 .indexRedes .indexRedesColor .indexRedesTitulo {
@@ -345,10 +346,10 @@ body {
   .indexRedes {
     height: 50vh;
   }
-  .indexRedes .indexRedesTitulo {
+  .indexRedes .indexRedesColor .indexRedesTitulo {
     width: 100%;
   }
-  .indexRedes .redesSociales {
+  .indexRedes .indexRedesColor .redesSociales {
     width: 100%;
   }
 }
@@ -764,6 +765,13 @@ body {
   grid-row: 3/4;
   width: 100vw;
   height: auto;
+  margin-top: 5%;
+}
+
+.contactoForm {
+  margin: 0px;
+  padding: 0px;
+  max-width: 100%;
 }
 
 .contactoUbi {
@@ -910,7 +918,7 @@ body {
 /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
 @media screen and (max-width: 600px) {
   .formulario {
-    margin-bottom: 5rem;
+    margin-bottom: 6rem;
   }
   .formulario .formularioImg {
     border-radius: 2rem 2rem 0px 0px;
@@ -928,18 +936,13 @@ body {
   .contactoFormulario {
     padding: 0.5rem;
     width: 100%;
-    border-radius: 0px;
+    border-radius: 0px 0px 2rem 2rem;
   }
 
   .formularioBotones input {
     width: 8rem;
     height: 2rem;
     font-size: 1rem;
-  }
-
-  .contactoUbi {
-    border-top: 0.3rem solid #eee;
-    border-radius: 0px 0px 2rem 2rem;
   }
 }
 /* /////////////////////////////////////////////////////////FOOTERS///////////////////////////////////////////////////////*/
@@ -1020,6 +1023,23 @@ body {
 .pieRedes div a {
   color: #eee;
   font-size: 2rem;
+}
+
+.flechaSubir {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: #D7A2AF;
+  position: fixed;
+  bottom: 18%;
+  right: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.flechaSubir a {
+  color: #eee;
+  font-size: max(1.2rem, 2vw);
 }
 
 /* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
