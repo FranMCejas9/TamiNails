@@ -183,8 +183,8 @@ body{
     border-radius: 100%;
     background-color: $rosa;
     position: fixed;
-    bottom: 18%;
-    right: 2rem;
+    bottom: 13%;
+    right: 1.3rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -238,9 +238,5 @@ body{
                 font-size: 2.5rem;
             }
         }
-    }
-    .flechaSubir{
-        bottom: 10%;
-        right: 1.5rem;
     }
 }
