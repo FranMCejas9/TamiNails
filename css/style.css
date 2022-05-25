@@ -303,7 +303,6 @@ body {
   text-align: center;
   width: 100%;
   color: #333;
-  font-style: italic;
   font-size: max(1.8rem, 3vw);
   max-height: 50px;
   border-radius: 0.5rem;
@@ -585,8 +584,7 @@ body {
   margin: 2rem;
   font-size: max(1.8rem, 3vw);
   text-align: center;
-  color: #D7A2AF;
-  font-style: italic;
+  color: #333;
 }
 
 .galeriaFotos {
@@ -766,17 +764,19 @@ body {
   grid-row: 3/4;
   width: 100vw;
   height: auto;
-  padding: 2rem;
 }
 
 .contactoUbi {
+  height: 500px;
+  width: 40%;
+  margin-right: 1rem;
   box-shadow: 0px 0px 3rem rgba(51, 51, 51, 0.2);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.6);
   border-radius: 2rem;
 }
 .contactoUbi .ubiTitulo {
@@ -787,16 +787,21 @@ body {
 }
 .contactoUbi .ubiMap iframe {
   width: 100%;
+  border-radius: 0px 0px 2rem 2rem;
+  margin-bottom: 1rem;
 }
 
 .formulario {
+  border-radius: 2rem;
   box-shadow: 0px 0px 3rem rgba(51, 51, 51, 0.2);
   display: flex;
-  height: auto;
+  flex-wrap: wrap;
+  padding: 0px;
+  height: 500px;
 }
 .formulario .formularioImg {
   background-image: url(../img/formulario.svg);
-  background-size: contain;
+  background-size: cover;
   width: 20%;
   border-radius: 2rem 0px 0px 2rem;
 }
@@ -812,7 +817,7 @@ body {
   justify-content: center;
   align-items: center;
   border-radius: 100%;
-  background-color: #333;
+  background-color: #eee;
   width: 60px;
   height: 60px;
   transition: all 0.4s;
@@ -822,13 +827,19 @@ body {
   transition: all 0.4s;
 }
 .formulario .formularioImg .formularioRedes div a {
+  color: #e7c5cd;
+  font-size: max(1.5rem, 3vw);
+}
+
+.formularioTitulo {
   color: #eee;
   font-size: max(1.5rem, 3vw);
 }
 
 .contactoFormulario {
-  background-color: #333;
+  background-color: rgba(0, 0, 0, 0.6);
   width: 80%;
+  height: 100%;
   padding: 2rem;
   display: flex;
   justify-content: space-around;
@@ -848,11 +859,6 @@ body {
   background-color: #aaa;
   color: #eee;
   transition: all 0.3s;
-}
-
-.formularioTitulo {
-  color: #eee;
-  font-size: max(1.5rem, 3vw);
 }
 
 .formularioContenido input {
@@ -890,29 +896,50 @@ body {
 /* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
 /* /////////////////////////////////////////////////////////992px///////////////////////////////////////////////////////*/
 @media screen and (max-width: 992px) {
-  .contactoFormulario {
-    margin-top: 3rem;
+  .contacto {
+    display: flex;
   }
-
-  .contactoImg {
-    display: none;
+  .contacto .formulario {
+    order: -1;
+    width: 100vw;
+  }
+  .contacto .contactoUbi {
+    width: 100vw;
   }
 }
 /* /////////////////////////////////////////////////////////600px///////////////////////////////////////////////////////*/
 @media screen and (max-width: 600px) {
-  .contacto {
-    padding: 0.5rem;
+  .formulario {
+    margin-bottom: 5rem;
+  }
+  .formulario .formularioImg {
+    border-radius: 2rem 2rem 0px 0px;
+    width: 100%;
+  }
+  .formulario .formularioImg .formularioRedes {
+    flex-direction: row;
+    padding: 1rem;
+  }
+  .formulario .formularioImg .formularioRedes div {
+    width: 50px;
+    height: 50px;
   }
 
   .contactoFormulario {
     padding: 0.5rem;
+    width: 100%;
+    border-radius: 0px;
   }
 
   .formularioBotones input {
-    width: 6rem;
+    width: 8rem;
     height: 2rem;
-    border: 2px solid #777;
     font-size: 1rem;
+  }
+
+  .contactoUbi {
+    border-top: 0.3rem solid #eee;
+    border-radius: 0px 0px 2rem 2rem;
   }
 }
 /* /////////////////////////////////////////////////////////FOOTERS///////////////////////////////////////////////////////*/
@@ -995,17 +1022,6 @@ body {
   font-size: 2rem;
 }
 
-/* 
-.pieWhatsapp{
-    position: fixed;
-    bottom: 5%;
-    right: 5%;
-    width: 3rem;
-    height: 3rem;
-    img{
-        width: 100%;
-    }
-} */
 /* /////////////////////////////////////////////////////////MEDIA QUERY///////////////////////////////////////////////////////*/
 /* /////////////////////////////////////////////////////////1294px///////////////////////////////////////////////////////*/
 @media screen and (max-width: 1264px) {
@@ -1039,14 +1055,6 @@ body {
   }
   .pieRedes div a {
     font-size: 2.5rem;
-  }
-
-  .pieWhatsapp {
-    width: 2.4rem;
-    height: 2.4rem;
-  }
-  .pieWhatsapp img {
-    width: 100%;
   }
 }
 
